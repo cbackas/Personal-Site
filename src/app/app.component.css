@@ -1,0 +1,21 @@
+particles {
+    display: block;
+}
+
+.landingzone {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, 70% );
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 5em;
+}
