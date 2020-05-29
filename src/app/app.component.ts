@@ -7,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   myParams: object = {};
+  myStyles: object = {};
   width: number = 100;
   height: number = 100;
 
   ngOnInit() {
+    this.myStyles = {
+      display: 'block',
+      width: '100%',
+      height: '100%',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      'background-color': 'rgb(25, 27, 28)',
+    };
+
     this.myParams = {
       particles: {
         number: {
@@ -67,7 +79,7 @@ export class AppComponent implements OnInit {
         },
         move: {
           enable: true,
-          speed: .5,
+          speed: 0.5,
           direction: 'none',
           random: false,
           straight: false,
@@ -97,7 +109,7 @@ export class AppComponent implements OnInit {
           grab: {
             distance: 80,
             line_linked: {
-              opacity: .3,
+              opacity: 0.3,
             },
           },
           bubble: {
