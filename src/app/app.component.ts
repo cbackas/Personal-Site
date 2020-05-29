@@ -20,7 +20,6 @@ export class AppComponent implements OnInit {
       left: 0,
       right: 0,
       bottom: 0,
-      'background-color': 'rgb(25, 27, 28)',
     };
 
     this.myParams = {
