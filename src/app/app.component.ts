@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
   myStyle: object = {};
@@ -21,12 +21,13 @@ export class AppComponent implements OnInit {
       left: 0,
       right: 0,
       bottom: 0,
+      'background-color': 'rgb(25, 27, 28)',
     };
 
     this.myParams = {
       particles: {
         number: {
-          value: 80,
+          value: 90,
           density: {
             enable: true,
             value_area: 800,
@@ -36,7 +37,7 @@ export class AppComponent implements OnInit {
           value: '#ffffff',
         },
         shape: {
-          type: 'circle',
+          type: 'polygon',
           stroke: {
             width: 0,
             color: '#000000',
@@ -72,14 +73,14 @@ export class AppComponent implements OnInit {
         },
         line_linked: {
           enable: true,
-          distance: 150,
+          distance: 125,
           color: '#ffffff',
-          opacity: 0.4,
+          opacity: 0.1,
           width: 1,
         },
         move: {
           enable: true,
-          speed: 1,
+          speed: .5,
           direction: 'none',
           random: false,
           straight: false,
@@ -97,19 +98,19 @@ export class AppComponent implements OnInit {
         events: {
           onhover: {
             enable: true,
-            mode: 'repulse',
+            mode: 'grab',
           },
           onclick: {
             enable: true,
-            mode: 'push',
+            mode: 'repulse',
           },
           resize: true,
         },
         modes: {
           grab: {
-            distance: 323.65563040924445,
+            distance: 80,
             line_linked: {
-              opacity: 1,
+              opacity: .3,
             },
           },
           bubble: {
@@ -120,14 +121,14 @@ export class AppComponent implements OnInit {
             speed: 3,
           },
           repulse: {
-            distance: 55.94047932999287,
-            duration: 0.4,
+            distance: 100,
+            duration: 1,
           },
           push: {
             particles_nb: 4,
           },
           remove: {
-            particles_nb: 2,
+            particles_nb: 10,
           },
         },
       },
