@@ -5,7 +5,7 @@ import { faLinkedin, faGitlab } from '@fortawesome/free-brands-svg-icons';
 @Component({
   selector: 'app-landing-zone',
   templateUrl: './landing-zone.component.html',
-  styleUrls: ['./landing-zone.component.scss']
+  styleUrls: ['./landing-zone.component.scss'],
 })
 export class LandingZoneComponent implements OnInit {
   // particle canvas variables
@@ -13,6 +13,19 @@ export class LandingZoneComponent implements OnInit {
   particleParams: object = {};
   width: number = 100;
   height: number = 100;
+
+  // Starting color of name
+  nameColor: string = '#ffffff';
+
+  // does a quick thing to generate a random hex color code
+  getRandomColor() {
+    return '#' + ('00000' + ((Math.random() * (1 << 24)) | 0).toString(16)).slice(-6);
+  }
+
+  // updates the color of name with a random color
+  nameClicked() {
+    this.nameColor = this.getRandomColor();
+  }
 
   // icons
   emailIcon = faEnvelope;
@@ -70,7 +83,7 @@ export class LandingZoneComponent implements OnInit {
           },
         },
         size: {
-          value: 3.50,
+          value: 3.5,
           random: true,
           anim: {
             enable: false,
