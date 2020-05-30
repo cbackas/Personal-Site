@@ -20,7 +20,6 @@ export class AppComponent implements OnInit {
   gitlabIcon = faGitlab;
   scrollIcon = faChevronDown;
 
-
   ngOnInit() {
     this.myStyles = {
       display: 'block',
