@@ -1,15 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { faChevronDown, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGitlab } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+  // particle canvas variables
   myParams: object = {};
   myStyles: object = {};
   width: number = 100;
   height: number = 100;
+
+  // icons
+  emailIcon = faEnvelope;
+  linkedinIcon = faLinkedin;
+  gitlabIcon = faGitlab;
+  scrollIcon = faChevronDown;
+
 
   ngOnInit() {
     this.myStyles = {
@@ -25,7 +35,7 @@ export class AppComponent implements OnInit {
     this.myParams = {
       particles: {
         number: {
-          value: 90,
+          value: 110,
           density: {
             enable: true,
             value_area: 800,
@@ -60,7 +70,7 @@ export class AppComponent implements OnInit {
           },
         },
         size: {
-          value: 3,
+          value: 3.50,
           random: true,
           anim: {
             enable: false,
@@ -71,9 +81,9 @@ export class AppComponent implements OnInit {
         },
         line_linked: {
           enable: true,
-          distance: 125,
-          color: '#ffffff',
-          opacity: 0.1,
+          distance: 135,
+          color: '#44cefc',
+          opacity: 0.3,
           width: 1,
         },
         move: {
@@ -106,9 +116,9 @@ export class AppComponent implements OnInit {
         },
         modes: {
           grab: {
-            distance: 80,
+            distance: 100,
             line_linked: {
-              opacity: 0.3,
+              opacity: 0.2,
             },
           },
           bubble: {

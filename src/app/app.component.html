@@ -2,13 +2,33 @@
   <section class="landing-zone">
     <particles [style]="myStyles" [params]="myParams" [width]="width" [height]="height"></particles>
     <div class="caption">
-      <h1 class="name">Zac Gibson</h1>
-      <h3 class="subtitle">Software Developer</h3>
+      <div class="caption-text">
+        <h1 class="name">Zac Gibson</h1>
+        <h3 class="subtitle">Software Developer</h3>
+      </div>
+      <div class="caption-buttons">
+        <a aria-label="Email" href="mailto:zgibson@live.com">
+          <fa-icon class="icon" [icon]="emailIcon"></fa-icon>
+        </a>
+        <a aria-label="LinkedIn" target="_blank" href="https://www.linkedin.com/in/zac-gibsono">
+          <fa-icon class="icon" [icon]="linkedinIcon"></fa-icon>
+        </a>
+        <a aria-label="Github" target="_blank" href="https://github.com/cbackas">
+          <fa-icon class="icon" [icon]="gitlabIcon"></fa-icon>
+        </a>
+      </div>
     </div>
+    <fa-icon class="scroll-button" [icon]="scrollIcon"></fa-icon>
   </section>
   <div class="info-area">
     <div class="info-box">
-      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
+        some form, by injected humour, or randomised words which don't look even slightly believable. If you are going
+        to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of
+        text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this
+        the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
+        of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is
+        therefore always free from repetition, injected humour, or non-characteristic words etc.
       </p>
     </div>
     <div class="info-box">
