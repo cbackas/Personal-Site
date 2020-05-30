@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { ParticlesModule } from 'ngx-particle';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ParticlesModule } from 'ngx-particle';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ParticlesModule
+    ParticlesModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
