@@ -9,8 +9,8 @@ import { faLinkedin, faGitlab } from '@fortawesome/free-brands-svg-icons';
 })
 export class LandingZoneComponent implements OnInit {
   // particle canvas variables
-  myParams: object = {};
-  myStyles: object = {};
+  particleStyle: object = {};
+  particleParams: object = {};
   width: number = 100;
   height: number = 100;
 
@@ -20,8 +20,9 @@ export class LandingZoneComponent implements OnInit {
   gitlabIcon = faGitlab;
   scrollIcon = faChevronDown;
 
+  // initialize settings for the Particle canvas
   ngOnInit() {
-    this.myStyles = {
+    this.particleStyle = {
       display: 'block',
       width: '100%',
       height: '100%',
@@ -31,7 +32,7 @@ export class LandingZoneComponent implements OnInit {
       bottom: 0,
     };
 
-    this.myParams = {
+    this.particleParams = {
       particles: {
         number: {
           value: 110,
