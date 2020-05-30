@@ -6,10 +6,14 @@ import { AppComponent } from './app.component';
 
 import { ParticlesModule } from 'ngx-particle';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LandingZoneComponent } from './landing-zone/landing-zone.component';
+import { InfoAreaComponent } from './info-area/info-area.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LandingZoneComponent,
+    InfoAreaComponent
   ],
   imports: [
     BrowserModule,

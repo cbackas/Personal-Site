@@ -1,0 +1,87 @@
+.landing-zone {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(25, 27, 28);
+
+    .caption {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        // border: 2px solid grey;
+
+        .caption-text {
+            font-family: "Ubuntu Mono";
+            font-weight: bold;
+            color: white;
+            pointer-events: none;
+
+            .name {
+                font-size: 5.5em;
+                margin: 0em;
+            }
+
+            .subtitle {
+                font-size: 2em;
+                margin: 0.5em;
+            }
+        }
+
+        .caption-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1em;
+            text-align: center;
+
+            a {
+                // no borders
+                outline: 0 !important;
+                border: none !important;
+                outline-style: none !important;
+                -moz-outline-style: none !important;
+
+                padding: none;
+                margin: none;
+            }
+
+            .icon {
+                text-align: center;
+                display: inline-flex;
+                justify-content: center;
+                color: #fff;
+                width: 20px;
+                height: 20px;
+                font-size: 20px;
+                padding: 6px;
+                margin: 0.5em;
+                border-radius: 50%;
+                border: 2px solid #fff;
+                transition: all 0.5s;
+
+                &:hover {
+                    color: #1a222c;
+                    background: #fff;
+                }
+
+                &:active {
+                    color: #1a222c;
+                    background: #fff;
+                }
+            }
+        }
+    }
+
+    .scroll-button {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 95%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 3em;
+        color: white;
+    }
+}
