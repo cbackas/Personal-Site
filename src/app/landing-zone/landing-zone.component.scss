@@ -10,13 +10,13 @@
         top: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
-        // border: 2px solid grey;
+        pointer-events: none;
 
         .caption-text {
+            pointer-events: none;
             font-family: "Ubuntu Mono";
             font-weight: bold;
             color: white;
-            pointer-events: none;
 
             h1 {
                 font-size: 5.5em;
@@ -51,6 +51,7 @@
                 text-align: center;
                 display: inline-flex;
                 justify-content: center;
+                pointer-events: auto;
                 color: #fff;
                 width: 20px;
                 height: 20px;
