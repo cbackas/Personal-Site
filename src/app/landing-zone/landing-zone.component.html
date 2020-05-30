@@ -2,7 +2,9 @@
     <particles [style]="particleStyle" [params]="particleParams" [width]="width" [height]="height"></particles>
     <div class="caption">
         <div class="caption-text">
-            <h1>Zac Gibson</h1>
+            <a aria-hidden="true" class="name" href="">
+                <h1 ng-click="console.log('click');">Zac Gibson</h1>
+            </a>
             <h3>Software Developer</h3>
         </div>
         <div class="caption-buttons">
@@ -17,5 +19,7 @@
             </a>
         </div>
     </div>
-    <fa-icon class="scroll-button" [icon]="scrollIcon"></fa-icon>
+    <a class="scroll-down" href="#about" data-scroll>
+        <fa-icon class="icon" [icon]="scrollIcon" aria-hidden="true"></fa-icon>
+    </a>
 </section>
