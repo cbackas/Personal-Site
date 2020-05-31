@@ -13,10 +13,10 @@
     transform: translate(-50%, -50%);
     text-align: center;
     pointer-events: none;
-
+    
     .caption-text {
+      font-family: "Helvetica Monospaced";
       // pointer-events: none;
-      font-family: "Ubuntu Mono";
       font-weight: bold;
       color: white;
 

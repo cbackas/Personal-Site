@@ -1,15 +1,25 @@
 @font-face {
     font-family: "Ubuntu Mono";
-    src: url("../assets/fonts/Bold/UbuntuMono-Bold.woff2") format("woff2"),
-        url("../assets/fonts/Bold/UbuntuMono-Bold.woff") format("woff");
+    src: url("./assets/fonts/Bold/UbuntuMono-Bold.woff2") format("woff2"),
+        url("./assets/fonts/Bold/UbuntuMono-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Ubuntu Mono";
-    src: url("../assets/fonts/Regular/UbuntuMono-Regular.woff2") format("woff2"),
-        url("../assets/fonts/Regular/UbuntuMono-Regular.woff") format("woff");
+    src: url("./assets/fonts/Regular/UbuntuMono-Regular.woff2") format("woff2"),
+        url("./assets/fonts/Regular/UbuntuMono-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Helvetica Monospaced';
+    src: url('./assets/fonts/Regular/HelveticaMonospacedW06-Rg.woff2') format('woff2'),
+        url('./assets/fonts/Regular/HelveticaMonospacedW06-Rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
