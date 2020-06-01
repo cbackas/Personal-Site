@@ -1,4 +1,4 @@
-$area-height: 90vh;
+$area-height: calc(90vh - 3vh);
 $section-margin: 1em;
 $section-height: calc(#{$area-height} - calc(#{$section-margin} * 2));
 
@@ -17,7 +17,7 @@ $section-height: calc(#{$area-height} - calc(#{$section-margin} * 2));
   display: table;
   height: $section-height;
   margin: $section-margin;
-  border: 2px solid grey;
+  // border: 2px solid grey;
 
   ul {
     display: table-cell;

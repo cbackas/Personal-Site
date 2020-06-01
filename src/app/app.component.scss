@@ -3,8 +3,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
 
 .wide {
   width: 100%;
+}
+
+footer {
+  font-family: "Helvetica Monospaced";
+  text-align: center;
+  height: 3vh;
+  color: #ddd;
+  background-color: rgb(25, 27, 28);
 }
