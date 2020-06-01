@@ -1,26 +1,39 @@
 <section class="landing-zone">
-    <particles [style]="particleStyle" [params]="particleParams" [width]="width" [height]="height"></particles>
-    <div class="caption">
-        <div class="caption-text">
-            <div class="name" role="button" (click)="nameClicked()" [style.color]="nameColor">
-                <h1 class="noselect">Zac Gibson</h1>
-            </div
-            >
-            <h3 class="noselect">Full Stack Developer</h3>
-        </div>
-        <div class="caption-buttons">
-            <a aria-label="Email" href="mailto:zgibson@live.com">
-                <fa-icon class="icon" [icon]="emailIcon"></fa-icon>
-            </a>
-            <a aria-label="Github" target="_blank" href="https://gitlab.com/cbackas">
-                <fa-icon class="icon" [icon]="gitlabIcon"></fa-icon>
-            </a>
-            <a aria-label="LinkedIn" target="_blank" href="https://www.linkedin.com/in/zac-gibson">
-                <fa-icon class="icon" [icon]="linkedinIcon"></fa-icon>
-            </a>
-        </div>
+  <particles
+    [style]="particleStyle"
+    [params]="particleParams"
+    [width]="width"
+    [height]="height"
+  ></particles>
+  <div class="caption" [style.display]="captionDisplay">
+    <div
+    class="name caption-text"
+    role="button"
+    (click)="nameClicked()"
+    [style.color]="nameColor"
+  >
+    <h1 class="noselect">Zac Gibson</h1>
+  </div>
+    <div class="caption-text">
+      <h3 class="noselect">Full Stack Developer</h3>
     </div>
-    <a class="scroll-down" href="#about" data-scroll>
-        <fa-icon class="icon" [icon]="scrollIcon" aria-hidden="true"></fa-icon>
-    </a>
+    <div class="caption-buttons">
+      <a aria-label="Email" href="mailto:zgibson@live.com">
+        <fa-icon class="icon" [icon]="emailIcon"></fa-icon>
+      </a>
+      <a aria-label="Github" target="_blank" href="https://gitlab.com/cbackas">
+        <fa-icon class="icon" [icon]="gitlabIcon"></fa-icon>
+      </a>
+      <a
+        aria-label="LinkedIn"
+        target="_blank"
+        href="https://www.linkedin.com/in/zac-gibson"
+      >
+        <fa-icon class="icon" [icon]="linkedinIcon"></fa-icon>
+      </a>
+    </div>
+  </div>
+  <a class="scroll-down" href="#about" data-scroll>
+    <fa-icon class="icon" [icon]="scrollIcon" aria-hidden="true"></fa-icon>
+  </a>
 </section>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { faChevronDown, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGitlab } from '@fortawesome/free-brands-svg-icons';
 
@@ -13,25 +13,6 @@ export class LandingZoneComponent implements OnInit {
   particleParams: object = {};
   width: number = 100;
   height: number = 100;
-
-  // Starting color of name
-  nameColor: string = '#ffffff';
-
-  // does a quick thing to generate a random hex color code
-  getRandomColor() {
-    return '#' + ('00000' + ((Math.random() * (1 << 24)) | 0).toString(16)).slice(-6);
-  }
-
-  // updates the color of name with a random color
-  nameClicked() {
-    this.nameColor = this.getRandomColor();
-  }
-
-  // icons
-  emailIcon = faEnvelope;
-  linkedinIcon = faLinkedin;
-  gitlabIcon = faGitlab;
-  scrollIcon = faChevronDown;
 
   // initialize settings for the Particle canvas
   ngOnInit() {
@@ -155,5 +136,42 @@ export class LandingZoneComponent implements OnInit {
       },
       retina_detect: true,
     };
+  }
+
+  // Starting color of name
+  nameColor: string = '#ffffff';
+
+  // does a quick thing to generate a random hex color code
+  getRandomColor() {
+    return (
+      '#' + ('00000' + ((Math.random() * (1 << 24)) | 0).toString(16)).slice(-6)
+    );
+  }
+
+  // updates the color of name with a random color
+  nameClicked() {
+    this.nameColor = this.getRandomColor();
+  }
+
+  // icons
+  emailIcon = faEnvelope;
+  linkedinIcon = faLinkedin;
+  gitlabIcon = faGitlab;
+  scrollIcon = faChevronDown;
+
+  captionDisplay: String = 'block';
+
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    let pos =
+      (document.documentElement.scrollTop || document.body.scrollTop) +
+      document.documentElement.offsetHeight;
+    let max = document.documentElement.scrollHeight;
+    // pos/max will give you the distance between scroll bottom and and bottom of screen in percentage.
+    if (pos == max) {
+      this.captionDisplay = 'flex';
+    } else {
+      this.captionDisplay = 'block';
+    }
   }
 }
