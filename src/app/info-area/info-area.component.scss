@@ -1,4 +1,4 @@
-$area-height: calc(90vh - 3vh);
+$area-height: calc(100vh - 3vh);
 $section-margin: 1em;
 $section-height: calc(#{$area-height} - calc(#{$section-margin} * 2));
 
@@ -28,7 +28,7 @@ $section-height: calc(#{$area-height} - calc(#{$section-margin} * 2));
 
     li {
       border-top: 1px solid #ddd;
-      padding: 2em;
+      padding: 1em;
       list-style: none;
 
       &:last-child {
