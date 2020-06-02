@@ -1,0 +1,159 @@
+@import "../../../assets/scss/modules/_vars.scss";
+
+@mixin caption-mixin {
+  position: absolute;
+  left: 1em;
+  bottom: 8em;
+  width: 98%;
+  // transform: translate(-50%, -50%);
+  text-align: left;
+  pointer-events: none;
+  display: block;
+}
+
+// when the window is at least 800px wide
+@media (min-width: $cutoff_1) {
+  .caption {
+    @include caption-mixin();
+  }
+}
+
+// when the window is less than 800px wide
+@media (max-width: $cutoff_1) {
+  .caption {
+    @include caption-mixin();
+  }
+}
+
+@mixin caption-text-mixin {
+  font-family: "Helvetica Monospaced";
+  font-weight: bold;
+  color: white;
+}
+
+// when the window is at least 800px wide
+@media (min-width: $cutoff_1) {
+  .caption-text {
+    @include caption-text-mixin();
+  }
+}
+
+// when the window is less than 800px wide
+@media (max-width: $cutoff_1) {
+  .caption-text {
+    @include caption-text-mixin();
+  }
+}
+
+/*
+* NAME format
+*/
+@mixin name-mixin {
+  pointer-events: auto;
+  color: white;
+  cursor: default;
+
+  h1 {
+    font-size: 3.25em;
+    margin: 0 0 0 0;
+  }
+}
+
+@media (min-width: $cutoff_1) {
+  .name {
+    @include name-mixin();
+    width: 35%;
+  }
+}
+
+@media (max-width: $cutoff_1) {
+  .name {
+    @include name-mixin();
+    width: 80%;
+  }
+}
+
+/*
+* SUBTITLE format
+*/
+@mixin subtitle-mixin {
+  position: relative;
+  width: 99%;
+
+  h3 {
+    font-size: 1.5em;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+    margin: 0 0 0.5em 0;
+  }
+}
+
+@media (min-width: $cutoff_1) {
+  .subtitle {
+    @include subtitle-mixin();
+  }
+}
+
+@media (max-width: $cutoff_1) {
+  .subtitle {
+    @include subtitle-mixin();
+  }
+}
+
+/*
+* CAPTION-BUTTONS format
+*/
+.caption-buttons {
+  display: flex;
+  justify-content: left;
+  margin: 1em 0 0 0;
+  width: 15%;
+
+  a {
+    // no borders
+    outline: 0 !important;
+    border: none !important;
+    outline-style: none !important;
+    -moz-outline-style: none !important;
+
+    padding: none;
+    margin: none;
+  }
+
+  .icon {
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    pointer-events: auto;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    padding: 6px;
+    margin: 0 0.75em 0 0;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: all 0.5s;
+
+    &:hover {
+      color: #1a222c;
+      background: #fff;
+    }
+
+    &:active {
+      color: #1a222c;
+      background: #fff;
+    }
+  }
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}

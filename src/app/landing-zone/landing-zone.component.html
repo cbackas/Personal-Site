@@ -5,19 +5,19 @@
     [width]="width"
     [height]="height"
   ></particles>
-  <div class="caption" [style.display]="captionDisplay">
+  <div class="caption">
     <div
-    class="name caption-text"
-    role="button"
-    (click)="nameClicked()"
-    [style.color]="nameColor"
-  >
-    <h1 class="noselect">Zac Gibson</h1>
-  </div>
-    <div class="caption-text">
+      class="caption-text name"
+      [style]="nameStyle"
+      role="button"
+      (click)="nameClicked()"
+    >
+      <h1 class="noselect">Zac Gibson</h1>
+    </div>
+    <div class="caption-text subtitle" [style]="subtitleStyle">
       <h3 class="noselect">Full Stack Developer</h3>
     </div>
-    <div class="caption-buttons">
+    <div class="caption-buttons" [style]="buttonStyle">
       <a aria-label="Email" href="mailto:zgibson@live.com">
         <fa-icon class="icon" [icon]="emailIcon"></fa-icon>
       </a>
@@ -33,7 +33,12 @@
       </a>
     </div>
   </div>
-  <a class="scroll-down" href="#about" data-scroll>
+  <a
+    class="scroll-down"
+    [style.visibility]="scrollDownVisible"
+    href="#about"
+    data-scroll
+  >
     <fa-icon class="icon" [icon]="scrollIcon" aria-hidden="true"></fa-icon>
   </a>
 </section>
