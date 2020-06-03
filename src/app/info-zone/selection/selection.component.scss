@@ -18,12 +18,12 @@ ul {
 
   li {
     font-family: "Helvetica Monospaced";
-    border-top: 1px solid #ddd;
     padding: 1em;
     list-style: none;
+    // box-shadow: 0px 24px 3px -24px grey;
 
-    &:last-child {
-      border-bottom: 1px solid #ddd;
+    .active {
+      color: #44cefc;
     }
   }
 }
@@ -35,8 +35,4 @@ a {
   h1 {
     text-transform: capitalize;
   }
-}
-
-.active {
-  color: #44cefc;
 }
