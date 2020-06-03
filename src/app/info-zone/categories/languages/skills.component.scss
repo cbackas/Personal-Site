@@ -1,0 +1,28 @@
+.grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-gap: 5em;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    ". . ."
+    "left middle right"
+    ". . ."
+    ". . .";
+}
+
+.item {
+  text-align: center;
+  padding: .25em;
+}
+
+.left {
+  grid-area: left;
+}
+.middle {
+  grid-area: middle;
+}
+.right {
+  grid-area: right;
+}
