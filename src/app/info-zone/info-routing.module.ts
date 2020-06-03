@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LanguagesComponent } from './categories/languages/languages.component';
+import { SkillsComponent } from './categories/languages/skills.component';
 import { ToolsComponent } from './categories/tools/tools.component';
 import { ProjectsComponent } from './categories/projects/projects.component';
 
-
-const routes: Routes = [
-  { path: 'languages', component: LanguagesComponent },
+const routesList = [
+  { path: 'skills', component: SkillsComponent },
   { path: 'tools', component: ToolsComponent },
   { path: 'projects', component: ProjectsComponent },
 ];
 
+const routes: Routes = routesList;
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class InfoRoutingModule { }
+export class InfoRoutingModule {}

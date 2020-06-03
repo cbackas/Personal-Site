@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LanguagesComponent } from './languages/languages.component';
+import { SkillsComponent } from './languages/skills.component';
 import { ToolsComponent } from './tools/tools.component';
 import { ProjectsComponent } from './projects/projects.component';
 
 
 
 @NgModule({
-  declarations: [LanguagesComponent, ToolsComponent, ProjectsComponent],
+  declarations: [SkillsComponent, ToolsComponent, ProjectsComponent],
   imports: [
     CommonModule
   ],
-  exports: [LanguagesComponent, ToolsComponent, ProjectsComponent]
+  exports: [SkillsComponent, ToolsComponent, ProjectsComponent]
 })
 export class CategoriesModule { }
