@@ -1,13 +1,9 @@
 <div class="info-selection">
   <ul>
-    <li>
-      <h1>Languages</h1>
-    </li>
-    <li>
-      <h1>Tools</h1>
-    </li>
-    <li>
-      <h1>Projects</h1>
+    <li *ngFor="let link of links">
+      <a routerLink="/{{link}}" routerLinkActive="active">
+        <h1>{{link}}</h1>
+      </a>
     </li>
   </ul>
 </div>

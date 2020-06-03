@@ -7,22 +7,36 @@
   height: $section-height;
   margin: $section-margin;
   // border: 2px solid grey;
+}
 
-  ul {
-    display: table-cell;
-    vertical-align: middle;
-    width: 100%;
-    height: 100%;
-    padding: 0 0 0 0;
+ul {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  padding: 0 0 0 0;
 
-    li {
-      border-top: 1px solid #ddd;
-      padding: 1em;
-      list-style: none;
+  li {
+    font-family: "Helvetica Monospaced";
+    border-top: 1px solid #ddd;
+    padding: 1em;
+    list-style: none;
 
-      &:last-child {
-        border-bottom: 1px solid #ddd;
-      }
+    &:last-child {
+      border-bottom: 1px solid #ddd;
     }
   }
+}
+
+a {
+  color: #ddd;
+  text-decoration: none;
+
+  h1 {
+    text-transform: capitalize;
+  }
+}
+
+.active {
+  color: #44cefc;
 }

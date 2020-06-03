@@ -6,8 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./selection.component.scss']
 })
 export class SelectionComponent implements OnInit {
-
-  constructor() { }
+  links: Array<String> = ['languages', 'tools', 'projects'];
 
   ngOnInit(): void {
   }
