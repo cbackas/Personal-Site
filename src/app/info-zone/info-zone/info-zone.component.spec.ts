@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LandingZoneComponent } from './landing-zone.component';
+import { InfoZoneComponent } from './info-zone.component';
 
-describe('LandingZoneComponent', () => {
-  let component: LandingZoneComponent;
-  let fixture: ComponentFixture<LandingZoneComponent>;
+describe('InfoZoneComponent', () => {
+  let component: InfoZoneComponent;
+  let fixture: ComponentFixture<InfoZoneComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [LandingZoneComponent]
+      declarations: [ InfoZoneComponent ]
     })
-      .compileComponents();
+    .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LandingZoneComponent);
+    fixture = TestBed.createComponent(InfoZoneComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

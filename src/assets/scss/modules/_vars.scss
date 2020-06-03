@@ -1,1 +1,6 @@
+
 $cutoff_1: 800px;
+
+$area-height: calc(100vh - 3vh);
+$section-margin: 1em;
+$section-height: calc(#{$area-height} - calc(#{$section-margin} * 2));

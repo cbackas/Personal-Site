@@ -1,0 +1,25 @@
+@import "../../../assets/scss/modules/_vars.scss";
+
+.info-zone {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  height: $area-height;
+  width: 100%;
+  background-color: rgb(40, 44, 53);
+}
+
+app-selection {
+    width: 25%;
+}
+
+.info-box {
+  display: flex;
+  justify-content: left;
+  top: 50%;
+  color: white;
+  width: 75%;
+  height: $section-height;
+  margin: $section-margin;
+  border: 2px solid grey;
+}

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InfoAreaComponent } from './info-area.component';
+import { CaptionComponent } from './caption.component';
 
-describe('InfoAreaComponent', () => {
-  let component: InfoAreaComponent;
-  let fixture: ComponentFixture<InfoAreaComponent>;
+describe('CaptionComponent', () => {
+  let component: CaptionComponent;
+  let fixture: ComponentFixture<CaptionComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InfoAreaComponent ]
+      declarations: [ CaptionComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InfoAreaComponent);
+    fixture = TestBed.createComponent(CaptionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

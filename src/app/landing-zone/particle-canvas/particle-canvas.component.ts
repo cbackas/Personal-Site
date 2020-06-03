@@ -1,13 +1,11 @@
-import { Component, OnInit, HostListener } from '@angular/core';
-import { faChevronDown, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faGitlab } from '@fortawesome/free-brands-svg-icons';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-landing-zone',
-  templateUrl: './landing-zone.component.html',
-  styleUrls: ['./landing-zone.component.scss'],
+  selector: 'app-particle-canvas',
+  templateUrl: './particle-canvas.component.html',
+  styleUrls: ['./particle-canvas.component.scss'],
 })
-export class LandingZoneComponent implements OnInit {
+export class ParticleCanvasComponent implements OnInit {
   // particle canvas variables
   particleStyle: object = {};
   particleParams: object = {};
@@ -138,77 +136,42 @@ export class LandingZoneComponent implements OnInit {
     };
   }
 
-  // icons
-  emailIcon = faEnvelope;
-  linkedinIcon = faLinkedin;
-  gitlabIcon = faGitlab;
-  scrollIcon = faChevronDown;
+  // // watch scroll location and set styles for the caption
+  // @HostListener('window:scroll', [])
+  // onScroll(): void {
+  //   // document.documentElement.setAttribute('data-scroll', window.scrollY.toString());
 
-  // captionStyle: Object = {};
-  nameStyle: Object = {
-    margin: '0 0 .5em 0',
-  };
-  subtitleStyle: Object = {
-    margin: '0 0 1em 0',
-    height: '100%',
-  };
-  buttonStyle: Object = {};
-  scrollDownVisible: String = 'visible';
-
-  // Starting color of name
-  nameColor: string = '#ffffff';
-
-  // does a quick thing to generate a random hex color code
-  getRandomColor() {
-    return (
-      '#' + ('00000' + ((Math.random() * (1 << 24)) | 0).toString(16)).slice(-6)
-    );
-  }
-
-  // updates the color of name with a random color
-  nameClicked() {
-    this.nameStyle = {
-      ...this.nameStyle,
-      color: this.getRandomColor(),
-    };
-  }
-
-  // watch scroll location and set styles for the caption
-  @HostListener('window:scroll', [])
-  onScroll(): void {
-    // document.documentElement.setAttribute('data-scroll', window.scrollY.toString());
-
-    let pos =
-      (document.documentElement.scrollTop || document.body.scrollTop) +
-      document.documentElement.offsetHeight;
-    let max = document.documentElement.scrollHeight;
-    // pos/max will give you the distance between scroll bottom and and bottom of screen in percentage.
-    if (pos >= (max*.95)) {
-      document.documentElement.dataset.scrolledBottom = 'true';
-      // document.documentElement.setAttribute('data-scrolled-bottom', 'true');
-    } else {
-      document.documentElement.dataset.scrolledBottom = 'false';
-      // document.documentElement.setAttribute('data-scrolled-bottom', 'false');
-    }
-    //   this.nameStyle = {};
-    //   this.subtitleStyle = {};
-    //   this.buttonStyle = {
-    //     ...this.buttonStyle,
-    //     'justify-content': 'right',
-    //   };
-    //   this.scrollDownVisible = 'hidden';
-    // } else {
-    //   this.nameStyle = {
-    //     margin: '0 0 .5em 0',
-    //   };
-    //   this.subtitleStyle = {
-    //     margin: '0 0 1em 0',
-    //     height: '100%',
-    //   };
-    //   this.buttonStyle = {
-    //     ...this.buttonStyle,
-    //     'justify-content': 'left',
-    //   };
-    //   this.scrollDownVisible = 'visible';
-  }
+  //   let pos =
+  //     (document.documentElement.scrollTop || document.body.scrollTop) +
+  //     document.documentElement.offsetHeight;
+  //   let max = document.documentElement.scrollHeight;
+  //   // pos/max will give you the distance between scroll bottom and and bottom of screen in percentage.
+  //   if (pos >= (max*.95)) {
+  //     document.documentElement.dataset.scrolledBottom = 'true';
+  //     // document.documentElement.setAttribute('data-scrolled-bottom', 'true');
+  //   } else {
+  //     document.documentElement.dataset.scrolledBottom = 'false';
+  //     // document.documentElement.setAttribute('data-scrolled-bottom', 'false');
+  //   }
+  //   //   this.nameStyle = {};
+  //   //   this.subtitleStyle = {};
+  //   //   this.buttonStyle = {
+  //   //     ...this.buttonStyle,
+  //   //     'justify-content': 'right',
+  //   //   };
+  //   //   this.scrollDownVisible = 'hidden';
+  //   // } else {
+  //   //   this.nameStyle = {
+  //   //     margin: '0 0 .5em 0',
+  //   //   };
+  //   //   this.subtitleStyle = {
+  //   //     margin: '0 0 1em 0',
+  //   //     height: '100%',
+  //   //   };
+  //   //   this.buttonStyle = {
+  //   //     ...this.buttonStyle,
+  //   //     'justify-content': 'left',
+  //   //   };
+  //   //   this.scrollDownVisible = 'visible';
+  // }
 }
