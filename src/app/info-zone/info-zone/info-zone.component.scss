@@ -7,20 +7,28 @@
   height: $area-height;
   width: 100%;
   background-color: rgb(40, 44, 53);
+  border-top: 0.25em solid #203e48;
 }
 
 app-selection {
-    width: 25%;
+  width: 25%;
+  // text-align: right;
 }
 
 .info-box {
   display: flex;
   font-family: "Helvetica Monospaced";
-  justify-content: left;
+  justify-content: center;
   top: 50%;
   color: white;
-  width: 75%;
+  width: 100%;
   height: $section-height;
   margin: $section-margin;
+  padding: $section-padding;
   border: 2px solid grey;
+}
+
+// set css for the actual component that the router renders
+router-outlet + * {
+  width: 100%;
 }

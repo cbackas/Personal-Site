@@ -1,6 +1,15 @@
-
+// mobile cutoff points
 $cutoff_1: 800px;
 
+// info-zone size is based on
 $area-height: calc(100vh - 3vh);
 $section-margin: 1em;
-$section-height: calc(#{$area-height} - calc(#{$section-margin} * 2));
+$section-padding: 0em;
+
+// helper calculations
+$double-margin: calc(#{$section-margin} * 2);
+$double-padding: calc(#{$section-padding} * 2);
+$margin-padding: calc(#{$double-margin} + #{$double-padding});
+
+// actual height that info zone internal sections are set to
+$section-height: calc(#{$area-height} - #{$margin-padding});
