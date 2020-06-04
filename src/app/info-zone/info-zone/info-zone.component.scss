@@ -19,8 +19,8 @@ app-selection {
   justify-content: center;
   top: 50%;
   color: white;
-  width: 100%;
   min-height: $section-height;
+  width: calc(100% - $double-margin);
   margin: $section-margin;
   padding: $section-padding;
   border: 2px solid grey;
@@ -38,9 +38,5 @@ router-outlet + * {
 
   app-selection {
     width: 100%;
-  }
-
-  .info-box {
-    width: 90%;
   }
 }
