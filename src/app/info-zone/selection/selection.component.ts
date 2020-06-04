@@ -8,7 +8,7 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./selection.component.scss'],
 })
 export class SelectionComponent implements OnInit {
-  links: Array<String> = ['skills', 'tools', 'projects'];
+  links: Array<String> = ['about', 'skills', 'tools', 'projects'];
 
   style: Object = {
 
