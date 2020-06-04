@@ -20,7 +20,7 @@ app-selection {
   top: 50%;
   color: white;
   min-height: $section-height;
-  width: calc(100% - $double-margin);
+  width: calc(100% - #{$double-margin});
   margin: $section-margin;
   padding: $section-padding;
   border: 2px solid grey;
