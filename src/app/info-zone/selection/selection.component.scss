@@ -2,11 +2,17 @@
 
 .info-selection {
   color: white;
-  width: 100%;
+  width: calc(100% - #{$section-margin});
   display: table;
   height: $section-height;
   margin: $section-margin;
-  // border: 2px solid grey;
+  font-family: "Helvetica Monospaced";
+}
+
+@media (max-width: $cutoff-1) {
+  .info-selection {
+    height: 100%;
+  }
 }
 
 ul {
@@ -14,12 +20,28 @@ ul {
   vertical-align: middle;
   width: 100%;
   height: 100%;
+  list-style: none;
   padding: 0 0 0 0;
 
   li {
-    font-family: "Helvetica Monospaced";
     padding: 1em;
-    list-style: none;
+  }
+}
+
+@media (max-width: $cutoff-1) {
+  ul {
+    display: inline-block;
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+      list-style-type: none;
+      padding: 0.25em;
+    }
+
+    h1 {
+      font-size: 1.25em;
+    }
   }
 }
 

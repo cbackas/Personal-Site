@@ -4,7 +4,8 @@
   position: absolute;
   left: 1em;
   bottom: 8em;
-  width: 98%;
+  // width = 100% - 1em from the left
+  width: calc(100% - 1em);
   // transform: translate(-50%, -50%);
   text-align: left;
   pointer-events: none;

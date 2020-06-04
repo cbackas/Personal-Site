@@ -4,7 +4,7 @@
   display: flex;
   position: relative;
   flex-direction: row;
-  height: $area-height;
+  min-height: $area-height;
   width: 100%;
   background-color: rgb(40, 44, 53);
   border-top: 0.25em solid #203e48;
@@ -13,7 +13,6 @@
 app-selection {
   width: 25%;
 }
-
 .info-box {
   display: flex;
   font-family: "Helvetica Monospaced";
@@ -21,7 +20,7 @@ app-selection {
   top: 50%;
   color: white;
   width: 100%;
-  height: $section-height;
+  min-height: $section-height;
   margin: $section-margin;
   padding: $section-padding;
   border: 2px solid grey;
@@ -30,4 +29,18 @@ app-selection {
 // set css for the actual component that the router renders
 router-outlet + * {
   width: 100%;
+}
+
+@media (max-width: $cutoff-1) {
+  .info-zone {
+    flex-direction: column;
+  }
+
+  app-selection {
+    width: 100%;
+  }
+
+  .info-box {
+    width: 90%;
+  }
 }
