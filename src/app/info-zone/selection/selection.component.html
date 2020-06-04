@@ -1,9 +1,9 @@
 <div class="info-selection">
   <ul>
     <li *ngFor="let link of links">
-      <a routerLink="/{{link}}" routerLinkActive="active">
+      <button routerLink="/{{link}}" routerLinkActive="active">
         <h1 class="noselect">{{link}}</h1>
-      </a>
+      </button>
     </li>
   </ul>
 </div>
