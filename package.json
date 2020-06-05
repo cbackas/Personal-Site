@@ -25,6 +25,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "ngx-particle": "^1.5.0",
     "rxjs": "~6.5.4",
+    "semantic-ui-segment": "^2.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

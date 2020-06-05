@@ -29,7 +29,8 @@
               "src/CNAME"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/semantic-ui-segment/segment.min.css",
+              "./src/styles.scss"
             ],
             "scripts": []
           },
