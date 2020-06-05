@@ -4,7 +4,7 @@ $cutoff_1: 950px;
 // info-zone size is based on
 $area-height: calc(100vh - 3vh);
 $section-margin: 1em;
-$section-padding: 0em;
+$section-padding: 1em;
 
 // helper calculations
 $double-margin: calc(#{$section-margin} * 2);

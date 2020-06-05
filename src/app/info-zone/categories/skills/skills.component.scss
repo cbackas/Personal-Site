@@ -10,13 +10,8 @@
   grid-template-areas:
     ". . ."
     "left middle right"
-    ". . ."
+    "left middle right"
     ". . .";
-
-  .item {
-    text-align: center;
-    padding: 0.25em;
-  }
 
   .left {
     grid-area: left;
@@ -26,6 +21,25 @@
   }
   .right {
     grid-area: right;
+  }
+}
+
+.item {
+  height: 100%;
+  margin: 0 !important; // override semantic segment margin and padding
+  padding: 0 1em 0 1em !important;
+  color: black;
+
+  .title {
+    text-align: center;
+  }
+
+  .description {
+    text-align: left;
+  }
+
+  .icons {
+    align-content: center;
   }
 }
 

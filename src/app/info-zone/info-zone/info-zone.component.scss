@@ -20,9 +20,9 @@ app-selection {
   top: 50%;
   color: white;
   min-height: $section-height;
-  width: calc(100% - #{$double-margin});
   margin: $section-margin;
   padding: $section-padding;
+  width: calc(100% - #{$margin-padding});
   border: 2px solid grey;
 }
 
@@ -35,7 +35,7 @@ router-outlet + * {
   .info-zone {
     flex-direction: column;
   }
-
+  
   app-selection {
     width: 100%;
   }
