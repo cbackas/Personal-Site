@@ -10,7 +10,12 @@ import { ScrollDownComponent } from './scroll-down/scroll-down.component';
 import { LandingZoneComponent } from './landing-zone/landing-zone.component';
 
 @NgModule({
-  declarations: [ParticleCanvasComponent, CaptionComponent, ScrollDownComponent, LandingZoneComponent],
+  declarations: [
+    ParticleCanvasComponent,
+    CaptionComponent,
+    ScrollDownComponent,
+    LandingZoneComponent,
+  ],
   imports: [CommonModule, ParticlesModule, FontAwesomeModule],
   exports: [LandingZoneComponent],
 })
