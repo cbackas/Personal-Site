@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { faAngular, faReact, faHtml5 } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss']
+  styleUrls: ['./skills.component.scss', './skills-icons.scss']
 })
-export class SkillsComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class SkillsComponent {
+  angularIcon = faAngular;
+  reactIcon = faReact;
+  htmlIcon = faHtml5;
 }
