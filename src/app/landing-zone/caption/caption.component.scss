@@ -100,17 +100,45 @@
     border-radius: 50%;
     border: 2px solid #fff;
     transition: all 0.5s;
+  }
 
+  .email {
     &:hover {
-      color: #1a222c;
-      background: #fff;
+      color: #ddd;
+      background: #1a222c;
     }
 
     &:active {
-      color: #1a222c;
-      background: #fff;
+      color: #ddd;
+      background: #1a222c;
     }
   }
+
+  .gitlab {
+    &:hover {
+      color: #ddd;
+      background: #E2432A;
+    }
+
+    &:active {
+      color: #ddd;
+      background: #E2432A;
+    }
+  }
+
+  .linkedin {
+    &:hover {
+      color: #ddd;
+      background: #0e76a8;
+    }
+
+    &:active {
+      color: #ddd;
+      background: #0e76a8;
+    }
+  }
+
+
 }
 
 .noselect {
