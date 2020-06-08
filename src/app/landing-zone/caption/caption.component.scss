@@ -1,6 +1,6 @@
 @import "../../../assets/scss/modules/_vars.scss";
 
-@mixin caption-mixin {
+.caption {
   position: absolute;
   left: 1em;
   bottom: 8em;
@@ -10,46 +10,26 @@
   text-align: left;
   pointer-events: none;
   display: block;
+  font-size: 1em;
 }
-
-// when the window is at least 800px wide
-@media (min-width: $cutoff_1) {
-  .caption {
-    @include caption-mixin();
-  }
-}
-
-// when the window is less than 800px wide
-@media (max-width: $cutoff_1) {
-  .caption {
-    @include caption-mixin();
-  }
-}
-
-@mixin caption-text-mixin {
+.caption-text {
   font-family: "Helvetica Monospaced";
   font-weight: bold;
   color: white;
 }
 
-// when the window is at least 800px wide
-@media (min-width: $cutoff_1) {
-  .caption-text {
-    @include caption-text-mixin();
+@media (max-width: $cutoff-1) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "left"
+      "middle"
+      "right";
   }
 }
 
-// when the window is less than 800px wide
-@media (max-width: $cutoff_1) {
-  .caption-text {
-    @include caption-text-mixin();
-  }
-}
-
-/*
-* NAME format
-*/
-@mixin name-mixin {
+.name {
   pointer-events: auto;
   color: white;
   cursor: default;
@@ -58,48 +38,31 @@
     font-size: 3.25em;
     margin: 0 0 0 0;
   }
-}
-
-@media (min-width: $cutoff_1) {
-  .name {
-    @include name-mixin();
-    width: 35%;
-  }
+  width: 35%;
 }
 
 @media (max-width: $cutoff_1) {
   .name {
-    @include name-mixin();
-    width: 80%;
+    width: 100%;
+  }
+
+  .caption {
+    font-size: 0.75em;
   }
 }
 
-/*
-* SUBTITLE format
-*/
-@mixin subtitle-mixin {
+.subtitle {
   position: relative;
   width: 99%;
+  padding: 0 0 0.5em 0;
 
   h3 {
     font-size: 1.5em;
     position: absolute;
     top: 50%;
     left: 0;
+    margin: 0 0 0 0;
     transform: translate(0%, -50%);
-    margin: 0 0 0.5em 0;
-  }
-}
-
-@media (min-width: $cutoff_1) {
-  .subtitle {
-    @include subtitle-mixin();
-  }
-}
-
-@media (max-width: $cutoff_1) {
-  .subtitle {
-    @include subtitle-mixin();
   }
 }
 
