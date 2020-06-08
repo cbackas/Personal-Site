@@ -25,11 +25,11 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/CNAME"
+              "src/assets"
             ],
             "styles": [
               "./node_modules/semantic-ui-segment/segment.min.css",
+              "./node_modules/devicon/devicon.min.css",
               "./src/styles.scss"
             ],
             "scripts": []
@@ -127,7 +127,12 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
-          "options": {}
+          "options": {
+            "repo": "https://github.com/cbackas/Personal-Site.git",
+            "branch": "gh-pages",
+            "cname": "zacgibson.com",
+            "message": "Deployed"
+          }
         }
       }
     }
