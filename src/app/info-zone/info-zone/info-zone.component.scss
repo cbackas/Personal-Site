@@ -6,29 +6,34 @@
   flex-direction: row;
   min-height: $area-height;
   width: 100%;
-  background-color: rgb(40, 44, 53);
+  // background-color: rgb(40, 44, 53);
+  background-color: #1a222c;
   border-top: 0.25em solid #203e48;
 }
 
 app-selection {
   width: 25%;
 }
+
 .info-box {
-  display: flex;
+  display: table;
   font-family: "Helvetica Monospaced";
   justify-content: center;
   top: 50%;
   color: white;
-  min-height: $section-height;
+  height: $section-height;
   margin: $section-margin;
   padding: $section-padding;
-  width: calc(100% - #{$margin-padding});
-  border: 2px solid grey;
+  // width: calc(100% - #{$margin-padding});
+  // border: 2px solid grey;
 }
 
 // set css for the actual component that the router renders
 router-outlet + * {
   width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
 }
 
 @media (max-width: $cutoff-1) {
