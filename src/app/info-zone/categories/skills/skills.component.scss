@@ -41,7 +41,7 @@
   }
 }
 
-@media (max-width: $cutoff-1) {
+@media (max-width: $cutoff-half) {
   .grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -49,5 +49,26 @@
       "left"
       "middle"
       "right";
+  }
+
+  .item {
+    display: flex;
+    width: auto;
+  }
+}
+
+@media (max-width: $cutoff-half) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "left"
+      "middle"
+      "right";
+  }
+
+  .item {
+    display: flex;
+    width: auto;
   }
 }

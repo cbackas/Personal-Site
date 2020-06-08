@@ -9,7 +9,7 @@
   font-family: "Helvetica Monospaced";
 }
 
-@media (max-width: $cutoff-1) {
+@media (max-width: $cutoff-half) {
   .info-selection {
     height: 100%;
   }
@@ -28,7 +28,7 @@ ul {
   }
 }
 
-@media (max-width: $cutoff-1) {
+@media (max-width: $cutoff-half) {
   ul {
     display: inline-block;
     list-style-type: none;

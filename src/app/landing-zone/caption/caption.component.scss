@@ -18,7 +18,7 @@
   color: white;
 }
 
-@media (max-width: $cutoff-1) {
+@media (max-width: $cutoff-half) {
   .grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -41,7 +41,7 @@
   width: 35%;
 }
 
-@media (max-width: $cutoff_1) {
+@media (max-width: $cutoff-half) {
   .name {
     width: 100%;
   }

@@ -1,3 +1,5 @@
+@import "../../../../assets/scss/modules/_vars.scss";
+
 .icons {
   height: 6em;
   display: grid;
@@ -9,18 +11,37 @@
 .icon-set {
   display: flex;
   justify-content: center;
+
+  &:nth-of-type(1) {
+    grid-area: left;
+  }
+
+  &:nth-of-type(2) {
+    grid-area: middle;
+  }
+
+  &:nth-of-type(3) {
+    grid-area: right;
+  }
 }
 
-.icon-set:nth-of-type(1) {
-  grid-area: left;
-}
+@media (max-width: $cutoff-tablet) {
+  .icon-set {
+    &:nth-of-type(1) {
+      grid-area: middle;
+      opacity: 1;
+    }
 
-.icon-set:nth-of-type(2) {
-  grid-area: middle;
-}
+    &:nth-of-type(2) {
+      grid-area: left;
+      opacity: 0;
+    }
 
-.icon-set:nth-of-type(3) {
-  grid-area: right;
+    &:nth-of-type(3) {
+      grid-area: right;
+      opacity: 0;
+    }
+  }
 }
 
 .nine > i {

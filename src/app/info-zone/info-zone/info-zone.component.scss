@@ -36,7 +36,7 @@ router-outlet + * {
   height: 100%;
 }
 
-@media (max-width: $cutoff-1) {
+@media (max-width: $cutoff-half) {
   .info-zone {
     flex-direction: column;
   }
