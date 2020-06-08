@@ -27,19 +27,31 @@
 .item {
   height: 100%;
   margin: 0 !important; // override semantic segment margin and padding
-  padding: 0 1em 0 1em !important;
+  padding: 1em !important;
+  background-color: #ddd;
   color: black;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas:
+    "title"
+    "description"
+    "icons";
 
   .title {
     text-align: center;
+    grid-area: "title";
   }
 
   .description {
     text-align: left;
+    grid-area: "description";
   }
 
   .icons {
     align-content: center;
+    grid-area: "icons";
   }
 }
 
