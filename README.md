@@ -2,12 +2,6 @@
 
 This is my first Angular project. A personal site seemed like a good excuse to try out the Angular framework. My findings from this experiment: Angular is cool.
 
+Site available at: [zacgibson.com](https://zacgibson.com)
+
 This project uses [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
