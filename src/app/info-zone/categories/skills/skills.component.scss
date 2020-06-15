@@ -6,14 +6,21 @@
 
 .item {
   width: 25%;
-  // margin: 0 !important; // override semantic segment margin and padding
-  padding: 1em !important;
+  margin: 1em 0 1em 0;
+  padding: 1em;
   background-color: #0f141a;
   color: #ddd;
   display: table-cell;
+
+  // show a divider between the 3 items when at full width
+  &:nth-child(2) {
+    $divider_thickness: 0.1em;
+    border-left: $divider_thickness solid #38546d;
+    border-right: $divider_thickness solid #38546d;
+  }
 }
 
-.test-out {
+.section {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 2fr 1fr;
@@ -38,6 +45,7 @@
     align-content: center;
     grid-area: "icons";
     vertical-align: bottom;
+    font-size: 1em;
   }
 }
 
@@ -54,21 +62,10 @@
   .item {
     display: flex;
     width: auto;
-  }
-}
 
-@media (max-width: $cutoff-half) {
-  .grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-      "left"
-      "middle"
-      "right";
-  }
-
-  .item {
-    display: flex;
-    width: auto;
+    // no divider when tablet and smaller
+    &:nth-child(2) {
+      border: none;
+    }
   }
 }
