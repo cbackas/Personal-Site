@@ -15,10 +15,10 @@ export class ProjectsComponent implements OnInit {
       labels: ['Java', 'SQLite'],
     },
     {
-      name: 'ZacGibson.com',
+      name: 'Personal Site',
       icon: 'https://semantic-ui.com/images/avatar/large/jenny.jpg',
       description:
-        'Personal website that I built from scratch for practice with the Angular framework.',
+        'Personal website (this one) that I built from scratch for practice with the Angular framework.',
       labels: ['Angular', 'JavaScript', 'HTML'],
     },
     {
