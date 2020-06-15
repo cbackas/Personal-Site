@@ -6,13 +6,18 @@
           <img src="{{ project.icon }}" />
         </div>
       </div>
-      <h2 class="name">{{ project.name }}</h2>
+      <div class="name">
+        <h2>{{ project.name }}</h2>
+      </div>
       <div class="description">
         {{ project.description }}
       </div>
       <div class="labels">
-        <div class="ui blue horizontal label" *ngFor="let label of project.labels">
-            {{ label }}
+        <div
+          class="ui blue horizontal label"
+          *ngFor="let label of project.labels"
+        >
+          {{ label }}
         </div>
       </div>
     </div>
