@@ -18,7 +18,7 @@ export class ProjectsComponent implements OnInit {
       name: 'ZacGibson.com',
       icon: 'https://semantic-ui.com/images/avatar/large/jenny.jpg',
       description:
-        'Personal website that I built from scratch for extra practice with the Angular framework.',
+        'Personal website that I built from scratch for practice with the Angular framework.',
       labels: ['Angular', 'JavaScript', 'HTML'],
     },
     {

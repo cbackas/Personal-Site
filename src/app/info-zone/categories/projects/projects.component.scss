@@ -47,7 +47,7 @@
   .description {
     grid-area: description;
     margin: 0.2em;
-    overflow: scroll;
+    overflow-y: auto;
   }
 
   .labels {
@@ -68,9 +68,5 @@
 
   .item {
     max-width: 100%;
-  }
-
-  .description {
-    overflow: auto;
   }
 }
