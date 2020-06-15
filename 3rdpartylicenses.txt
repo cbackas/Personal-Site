@@ -501,6 +501,9 @@ Apache-2.0
  
 
 
+semantic-ui-label
+MIT
+
 semantic-ui-segment
 MIT
 
