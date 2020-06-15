@@ -1,0 +1,76 @@
+@import "../../../../assets/scss/modules/_vars.scss";
+
+.grid {
+  width: 75vw;
+  display: flex;
+}
+
+.item {
+  margin: 1em;
+  padding: 1em;
+  background-color: #0f141a;
+  color: #ddd;
+}
+
+.item-grid {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
+  grid-template-rows: 0.1fr 1fr 0.5fr;
+  grid-template-areas:
+    "icon name"
+    "icon description"
+    "icon labels";
+  height: 10em;
+  //   width: 35vw;
+
+  .icon {
+    grid-area: icon;
+    display: table;
+
+    .img {
+      display: table-cell;
+      vertical-align: middle;
+
+      img {
+        max-width: 7em;
+      }
+    }
+  }
+
+  .name {
+    grid-area: name;
+    margin: .35em;
+  }
+
+  .description {
+    grid-area: description;
+    margin: .35em;
+  }
+
+  .labels {
+    grid-area: labels;
+    margin: .35em;
+  }
+}
+
+@media (max-width: $cutoff-half) {
+  .grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "left"
+      "middle"
+      "right";
+  }
+
+  .item {
+    display: flex;
+    width: auto;
+
+    // no divider when tablet and smaller
+    &:nth-child(2) {
+      border: none;
+    }
+  }
+}
