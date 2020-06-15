@@ -46,8 +46,8 @@ ul {
 }
 
 .active {
-  color: #44cefc;
-  border-bottom: 2px solid #2983a1;
+  color: $accent-bright;
+  border-bottom: 2px solid $accent-less-bright;
 }
 
 button {

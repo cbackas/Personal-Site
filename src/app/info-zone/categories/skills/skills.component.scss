@@ -8,15 +8,15 @@
   width: 25%;
   margin: 1em 0 1em 0;
   padding: 1em;
-  background-color: #0f141a;
+  background-color: $container-dark;
   color: #ddd;
   display: table-cell;
 
   // show a divider between the 3 items when at full width
   &:nth-child(2) {
     $divider_thickness: 0.1em;
-    border-left: $divider_thickness solid #203e48;;
-    border-right: $divider_thickness solid #203e48;;
+    border-left: $divider_thickness solid $accent-dark;
+    border-right: $divider_thickness solid $accent-dark;
   }
 }
 

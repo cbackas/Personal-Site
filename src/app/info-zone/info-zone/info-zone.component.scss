@@ -7,8 +7,8 @@
   min-height: $area-height;
   width: 100%;
   // background-color: rgb(40, 44, 53);
-  background-color: #1a222c;
-  border-top: 0.25em solid #203e48;
+  background-color: $info-background;
+  border-top: 0.25em solid $accent-dark;
 }
 
 app-selection {
@@ -24,7 +24,7 @@ app-selection {
   height: $section-height;
   margin: $section-margin;
   padding: $section-padding;
-  // width: calc(100% - #{$margin-padding});
+  width: calc(75vw - #{$margin-padding});
   // border: 2px solid grey;
 }
 
@@ -39,6 +39,10 @@ router-outlet + * {
 @media (max-width: $cutoff-half) {
   .info-zone {
     flex-direction: column;
+  }
+
+  .info-box {
+    width: calc(100% - #{$margin-padding});;
   }
   
   app-selection {
