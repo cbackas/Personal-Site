@@ -1,7 +1,7 @@
 @import "../../../../assets/scss/modules/_vars.scss";
 
 .grid {
-  width: 100%;
+  width: 75vw;
 }
 
 .item {
@@ -15,8 +15,8 @@
   // show a divider between the 3 items when at full width
   &:nth-child(2) {
     $divider_thickness: 0.1em;
-    border-left: $divider_thickness solid #38546d;
-    border-right: $divider_thickness solid #38546d;
+    border-left: $divider_thickness solid #203e48;;
+    border-right: $divider_thickness solid #203e48;;
   }
 }
 
@@ -51,6 +51,7 @@
 
 @media (max-width: $cutoff-half) {
   .grid {
+    width: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
