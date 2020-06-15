@@ -5,11 +5,11 @@ import { SkillsComponent } from './categories/skills/skills.component';
 import { ProjectsComponent } from './categories/projects/projects.component';
 
 const routesList = [
-  { path: '', redirectTo: 'about', pathMatch: 'full' },
-  { path: 'about', component: AboutComponent },
+  { path: '', redirectTo: 'skills', pathMatch: 'full' },
+  // { path: 'about', component: AboutComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'projects', component: ProjectsComponent },
-  { path: '**', redirectTo: 'about', pathMatch: 'full' },
+  { path: '**', redirectTo: 'skills', pathMatch: 'full' },
 ];
 
 const routes: Routes = routesList;

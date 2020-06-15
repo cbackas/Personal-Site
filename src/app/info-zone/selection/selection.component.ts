@@ -8,7 +8,7 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./selection.component.scss'],
 })
 export class SelectionComponent implements OnInit {
-  links: Array<String> = ['about', 'skills', 'projects'];
+  links: Array<String> = ['skills', 'projects'];
 
   constructor(private router: Router) {
     this.router.events.subscribe((event) => {
