@@ -3,29 +3,31 @@
 .grid {
   width: 75vw;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .item {
-  margin: 1em;
-  padding: 1em;
+  margin: 0.5em;
+  padding: 0.75em;
   background-color: #0f141a;
   color: #ddd;
+  max-width: 34vw;
 }
 
 .item-grid {
   display: grid;
   grid-template-columns: 0.25fr 1fr;
-  grid-template-rows: 0.1fr 1fr 0.5fr;
+  grid-template-rows: 2em 1fr 1.6em;
   grid-template-areas:
     "icon name"
     "icon description"
     "icon labels";
   height: 10em;
-  //   width: 35vw;
 
   .icon {
     grid-area: icon;
     display: table;
+    margin: 0 0.2em 0 0;
 
     .img {
       display: table-cell;
@@ -39,38 +41,36 @@
 
   .name {
     grid-area: name;
-    margin: .35em;
+    margin: 0.2em;
   }
 
   .description {
     grid-area: description;
-    margin: .35em;
+    margin: 0.2em;
+    overflow: scroll;
   }
 
   .labels {
     grid-area: labels;
-    margin: .35em;
+    margin: 0.2em;
+
+    div {
+      font-size: 0.75em;
+      padding: 0.2em;
+    }
   }
 }
 
 @media (max-width: $cutoff-half) {
   .grid {
     width: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-      "left"
-      "middle"
-      "right";
   }
 
   .item {
-    display: flex;
-    width: auto;
+    max-width: 100%;
+  }
 
-    // no divider when tablet and smaller
-    &:nth-child(2) {
-      border: none;
-    }
+  .description {
+    overflow: auto;
   }
 }
