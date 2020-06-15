@@ -23,7 +23,7 @@
 .section {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-rows: 2em 1fr 6em;
   grid-template-areas:
     "title"
     "description"
@@ -32,18 +32,23 @@
 
   .title {
     text-align: center;
-    grid-area: "title";
+    grid-area: title;
+
+    h2 {
+      margin: 0;
+    }
   }
 
   .description {
     text-align: left;
-    grid-area: "description";
+    grid-area: description;
     vertical-align: middle;
+    min-height: 30vh;
   }
 
   .icons {
     align-content: center;
-    grid-area: "icons";
+    grid-area: icons;
     vertical-align: bottom;
     font-size: 1em;
   }
