@@ -1,5 +1,5 @@
 <div class="item" (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()">
-  <div [hidden]="!hovering">
+  <div *ngIf="project.url != ''" [hidden]="!hovering">
     <a
       class="ui right corner label grey"
       href="{{ project.url }}"
