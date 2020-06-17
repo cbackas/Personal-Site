@@ -11,6 +11,7 @@
   background-color: $container-dark;
   color: #ddd;
   display: table-cell;
+  border-radius: 1em;
 
   // show a divider between the 3 items when at full width
   &:nth-child(2) {
