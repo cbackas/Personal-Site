@@ -10,8 +10,16 @@
         </p>
       </div>
       <div class="icons">
-        <div class="icon-set nine" *ngFor="let iconSet of cat.icons">
-          <i *ngFor="let icon of iconSet" class="{{ icon }}"></i>
+        <div *ngFor="let iconSet of cat.icons" [ngSwitch]="iconSet.length">
+          <div *ngSwitchCase="9" class="icon-set nine">
+            <i *ngFor="let icon of iconSet" class="{{ icon }}"></i>
+          </div>
+          <div *ngSwitchCase="5" class="icon-set five">
+            <i *ngFor="let icon of iconSet" class="{{ icon }}"></i>
+          </div>
+          <div *ngSwitchCase="6" class="icon-set six">
+            <i *ngFor="let icon of iconSet" class="{{ icon }}"></i>
+          </div>
         </div>
       </div>
     </div>
