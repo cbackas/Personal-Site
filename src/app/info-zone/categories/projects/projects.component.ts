@@ -37,6 +37,14 @@ export class ProjectsComponent implements OnInit {
       labels: ['React', 'JavaScript', 'HTML', 'cheerio'],
       url: 'https://gitlab.com/cbackas/posterizer-extension',
     },
+    {
+      name: 'Other',
+      icon: '/assets/images/gitlab.png',
+      description:
+        'On my Gitlab profile you can find the projects linked here as well as older projects, variations of projects, and one off scripts for personal use or university assignments.',
+      labels: [],
+      url: 'https://gitlab.com/cbackas',
+    },
   ];
 
   ngOnInit(): void {}
