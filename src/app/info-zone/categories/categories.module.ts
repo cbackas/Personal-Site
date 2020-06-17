@@ -6,15 +6,16 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { AboutComponent } from './about/about.component';
-
-
+import { ProjectItemComponent } from './projects/project-item/project-item.component';
 
 @NgModule({
-  declarations: [AboutComponent, SkillsComponent, ProjectsComponent],
-  imports: [
-    CommonModule,
-    FontAwesomeModule
+  declarations: [
+    AboutComponent,
+    SkillsComponent,
+    ProjectsComponent,
+    ProjectItemComponent,
   ],
-  exports: [AboutComponent, SkillsComponent, ProjectsComponent]
+  imports: [CommonModule, FontAwesomeModule],
+  exports: [AboutComponent, SkillsComponent, ProjectsComponent],
 })
-export class CategoriesModule { }
+export class CategoriesModule {}

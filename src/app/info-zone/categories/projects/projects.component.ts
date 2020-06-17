@@ -1,32 +1,41 @@
 import { Component, OnInit } from '@angular/core';
+import { Project } from './project-item/project';
 
 @Component({
   selector: 'app-projects',
-  templateUrl: './projects.component.html',
+  template: `<div class="grid">
+    <div *ngFor="let project of projects">
+      <app-project [init]="project"></app-project>
+    </div>
+  </div>`,
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent implements OnInit {
-  projects: Object = [
+  // TODO pull this data from some json asset
+  projects: Project[] = [
     {
       name: 'TV Bot',
       icon: '/assets/images/tvbot.png',
       description:
-        'TVBot is a Discord chat bot written in Java for a large public server. Has also had variated versions like MovieBot and GamingBot but TVBot is still used most today.',
+        'TVBot is a Discord chat bot written in Java for a large TV themed server. Used to do moderation, channel managment, and TV show data integration.',
       labels: ['Java', 'SQLite'],
+      url: 'https://gitlab.com/cbackas/tvbot-jda',
     },
     {
       name: 'Personal Site',
       icon: '/assets/images/personalsite.png',
       description:
-        'Personal website (this one) that I built from scratch for practice with the Angular framework.',
+        'Personal website (this one) that I built from scratch for practice with the Angular framework and extra HTML/CSS experience.',
       labels: ['Angular', 'JavaScript', 'HTML'],
+      url: 'https://gitlab.com/cbackas/personal-site',
     },
     {
       name: 'Posterizer',
       icon: '/assets/images/tpdb.png',
       description:
-        "Browser extension I made for personal use. Parses image URLs from active PosterDB tab and performs HTTP POST requests to my Plex server's API.",
+        "Browser extension I made for personal use. Parses image URLs from the active tab's source HTML and performs HTTP POST requests to my Plex server's API.",
       labels: ['React', 'JavaScript', 'HTML', 'cheerio'],
+      url: 'https://gitlab.com/cbackas/posterizer-extension',
     },
   ];
 
