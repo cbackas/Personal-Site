@@ -17,7 +17,7 @@ export class ProjectsComponent implements OnInit {
       name: 'TV Bot',
       icon: 'https://gitlab.com/cbackas/tvbot-jda/-/raw/master/assets/icon.png',
       description:
-        'TVBot is a Discord chat bot written in Java for a large TV themed server. Used to do moderation, channel managment, and TV show data integration.',
+        'TVBot is a Discord chat bot written in Java for a large TV focused server. Used to do moderation, channel managment, and adds integration with TV show data via the Trakt and TVDB APIs.',
       labels: ['Java', 'SQLite'],
       url: 'https://gitlab.com/cbackas/tvbot-jda',
     },
@@ -25,7 +25,7 @@ export class ProjectsComponent implements OnInit {
       name: 'Hookbuffer',
       icon: 'https://raw.githubusercontent.com/cbackas/hookbuffer/master/assets/icon.png',
       description:
-        'Webhook proxy server written in Go. Catches and groups webhooks from my server before they\'re passed on to Discord. Runs in a Docker container on my server.',
+        'Webhook proxy server written in Go. Catches and groups webhook notifications from my server then passes them along to Discord. Runs in a Docker container on my server.',
       labels: ['GoLang', 'Webhooks', 'Docker'],
       url: 'https://gitlab.com/cbackas/hookbuffer',
     },
