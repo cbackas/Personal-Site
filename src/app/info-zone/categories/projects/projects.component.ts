@@ -15,7 +15,7 @@ export class ProjectsComponent implements OnInit {
   projects: Project[] = [
     {
       name: 'TV Bot',
-      icon: '/assets/images/tvbot.png',
+      icon: 'https://gitlab.com/cbackas/tvbot-jda/-/raw/master/assets/icon.png',
       description:
         'TVBot is a Discord chat bot written in Java for a large TV themed server. Used to do moderation, channel managment, and TV show data integration.',
       labels: ['Java', 'SQLite'],
