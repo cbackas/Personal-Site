@@ -22,6 +22,14 @@ export class ProjectsComponent implements OnInit {
       url: 'https://gitlab.com/cbackas/tvbot-jda',
     },
     {
+      name: 'Hookbuffer',
+      icon: 'https://raw.githubusercontent.com/cbackas/hookbuffer/master/assets/icon.png',
+      description:
+        'Webhook proxy server written in Go. Catches and groups webhooks from my server before they\'re passed on to Discord. Runs in a Docker container on my server.',
+      labels: ['GoLang', 'Webhooks', 'Docker'],
+      url: 'https://gitlab.com/cbackas/hookbuffer',
+    },
+    {
       name: 'Personal Site',
       icon: '/assets/images/personalsite.png',
       description:
