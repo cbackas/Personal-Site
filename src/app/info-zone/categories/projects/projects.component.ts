@@ -14,6 +14,14 @@ export class ProjectsComponent implements OnInit {
   // TODO pull this data from some json asset
   projects: Project[] = [
     {
+      name: 'Hookbuffer',
+      icon: 'https://raw.githubusercontent.com/cbackas/hookbuffer/master/assets/icon.png',
+      description:
+        'Webhook proxy server written in Go. Catches and groups webhook notifications from my server then passes them along to Discord. Runs in a Docker container on my server.',
+      labels: ['GoLang', 'Webhooks', 'Docker'],
+      url: 'https://gitlab.com/cbackas/hookbuffer',
+    },
+    {
       name: 'TV Bot',
       icon: 'https://gitlab.com/cbackas/tvbot-jda/-/raw/master/assets/icon.png',
       description:
@@ -22,12 +30,12 @@ export class ProjectsComponent implements OnInit {
       url: 'https://gitlab.com/cbackas/tvbot-jda',
     },
     {
-      name: 'Hookbuffer',
-      icon: 'https://raw.githubusercontent.com/cbackas/hookbuffer/master/assets/icon.png',
+      name: 'Nextcloud Deck iOS',
+      icon: 'https://raw.githubusercontent.com/cbackas/iOS-Deck/main/Assets/Icon.png',
       description:
-        'Webhook proxy server written in Go. Catches and groups webhook notifications from my server then passes them along to Discord. Runs in a Docker container on my server.',
-      labels: ['GoLang', 'Webhooks', 'Docker'],
-      url: 'https://gitlab.com/cbackas/hookbuffer',
+        'iOS app that interacts with the Nextcloud API in order to use the Nextcloud Deck kanban board on the go. Currently in development.',
+      labels: ['Swift', 'API'],
+      url: 'https://github.com/cbackas/iOS-Deck',
     },
     {
       name: 'Personal Site',
