@@ -15,7 +15,7 @@ export class ProjectsComponent implements OnInit {
   projects: Project[] = [
     {
       name: 'Posterizer',
-      icon: '/assets/images/tpdb.png',
+      icon: '/assets/images/posterizer-icon.png',
       description:
         "Browser extension I made for personal use. Parses image URLs from the active tab's source HTML and performs HTTP POST requests to my Plex server's API.",
       labels: ['React', 'JavaScript', 'HTML', 'cheerio'],
