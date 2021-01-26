@@ -19,21 +19,21 @@ export class ProjectsComponent implements OnInit {
       description:
         "Browser extension I made for personal use. Parses image URLs from the active tab's source HTML and performs HTTP POST requests to my Plex server's API.",
       labels: ['React', 'JavaScript', 'HTML', 'cheerio'],
-      url: 'https://gitlab.com/cbackas/posterizer-extension',
+      url: 'https://github.com/cbackas/Posterizer-Extension',
     },
     {
       name: 'SpamGuard',
       icon: 'https://raw.githubusercontent.com/cbackas/SpamGuard/master/assets/icon.png',
       description:
         "Dockerized Python script that catches and deletes emails that Outlook's email filters aren't powerful enough to stop.",
-      labels: ['Python', 'IMAP', 'IMAP-idle'],
+      labels: ['Python', 'IMAP', 'IMAP-idle', 'Docker'],
       url: 'https://github.com/cbackas/SpamGuard',
     },
     {
       name: 'SpotiSync',
       icon: 'https://raw.githubusercontent.com/cbackas/spotisync/master/images/spotisync-logo.png',
       description:
-        "Simple Dockerized Python script that syncs songs on Spotify from one playlist to another",
+        "Simple Dockerized Python script that syncs songs on Spotify from one playlist to another.",
       labels: ['Python', 'API', 'Docker'],
       url: 'https://github.com/cbackas/spotisync',
     },
@@ -43,7 +43,7 @@ export class ProjectsComponent implements OnInit {
       description:
         'Webhook proxy server written in Go. Catches and groups webhook notifications from my server then passes them along to Discord. Runs in a Docker container on my server.',
       labels: ['GoLang', 'Webhooks', 'Docker'],
-      url: 'https://gitlab.com/cbackas/hookbuffer',
+      url: 'https://github.com/cbackas/hookbuffer',
     },
     {
       name: 'Nextcloud Deck iOS',
@@ -59,7 +59,7 @@ export class ProjectsComponent implements OnInit {
       description:
         'Personal website (this one) that I built from scratch for practice with the Angular framework and to gain some extra HTML/CSS experience.',
       labels: ['Angular', 'JavaScript', 'HTML'],
-      url: 'https://gitlab.com/cbackas/personal-site',
+      url: 'https://github.com/cbackas/Personal-Site',
     },
     {
       name: 'TV Bot',
@@ -67,7 +67,7 @@ export class ProjectsComponent implements OnInit {
       description:
         'TVBot is a Discord chat bot written in Java for a large TV focused server. Used to do moderation, channel managment, and adds integration with TV show data via the Trakt and TVDB APIs.',
       labels: ['Java', 'SQLite'],
-      url: 'https://gitlab.com/cbackas/tvbot-jda',
+      url: 'https://github.com/cbackas/TVBot',
     },
     {
       name: 'Other',

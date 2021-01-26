@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faGitlab } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-caption',
@@ -11,7 +11,7 @@ export class CaptionComponent {
   // icons
   emailIcon = faEnvelope;
   linkedinIcon = faLinkedin;
-  gitlabIcon = faGitlab;
+  githubIcon = faGithub;
 
   // captionStyle: Object = {};
   nameStyle: Object = {
