@@ -41,7 +41,7 @@ export class ProjectsComponent implements OnInit {
       name: 'Decoder',
       icon: 'https://raw.githubusercontent.com/cbackas/Decoder/master/extension/icons/icon.png',
       description:
-        "Browser extension that decodes Base64 strings and copies them to your clipboard",
+        "Browser extension that decodes Base64 strings and copies them to your clipboard.",
       labels: ['JavaScript', 'Webpack', 'Base64'],
       url: 'https://github.com/cbackas/Decoder',
     },
@@ -79,7 +79,7 @@ export class ProjectsComponent implements OnInit {
     },
     {
       name: 'Other',
-      icon: '/assets/images/gitlab.png',
+      icon: '/assets/images/github.png',
       description:
         'On my Github profile you can find the projects linked here as well as older projects, variations of projects, and one off scripts for personal use or university assignments.',
       labels: [],
