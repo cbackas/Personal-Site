@@ -57,7 +57,7 @@
   },
   {
     "name": "Other",
-    "icon": "/assets/images/github.png",
+    "icon": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
     "description": "On my Github profile you can find the projects linked here as well as older projects, variations of projects, and one off scripts for personal use or university assignments.",
     "labels": [],
     "url": "https://github.com/cbackas"
