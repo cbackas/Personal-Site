@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from './project-item/project';
 
+declare var require: any
 const projects = require("../../../../assets/projects.json");
 
 @Component({
