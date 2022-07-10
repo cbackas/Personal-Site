@@ -4,11 +4,11 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { LandingZoneModule } from './landing-zone/landing-zone.module';
-import { InfoZoneModule } from './info-zone/info-zone.module';
+// import { InfoZoneModule } from './info-zone/info-zone.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, LandingZoneModule, InfoZoneModule],
+  imports: [BrowserModule, LandingZoneModule],
   providers: [],
   bootstrap: [AppComponent],
 })
