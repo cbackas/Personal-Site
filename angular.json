@@ -119,7 +119,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "repo": "git@gitlab.com:cbackas/personal-site.git",
+            "repo": "git@github.com:cbackas/personal-site.git",
             "branch": "gh-pages",
             "cname": "zacgibson.com",
             "message": "Deployed"
