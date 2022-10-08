@@ -1,12 +1,10 @@
 import { Box } from '@chakra-ui/react'
 import Head from 'next/head'
-import React, { Fragment } from 'react'
 import ParticleCanvas from '../components/ParticleCanvas'
 import TitleArea from '../components/TitleArea/TitleArea'
-import TabArea from '../components/TabArea'
 
-const IndexPage = () => {
-  const bg = '#181a1b'
+const IndexPage = (): JSX.Element => {
+  // const bg = '#181a1b'
   return (
     <>
       <Head>

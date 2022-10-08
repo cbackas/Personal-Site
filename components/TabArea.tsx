@@ -1,5 +1,5 @@
 import { Button, Code, TabList, TabPanel, TabPanels, Tabs, useMultiStyleConfig, useTab } from '@chakra-ui/react'
-import React, { useState } from 'react'
+import React from 'react'
 import HistoryArea from './HistoryArea/HistoryArea'
 import TechArea from './TechArea'
 
@@ -28,10 +28,10 @@ const TabArea = (): JSX.Element => {
 export default TabArea
 
 // eslint-disable-next-line react/display-name
-const CustomTab = React.forwardRef((props, ref) => {
+const CustomTab = React.forwardRef((props: any): JSX.Element => {
   // 1. Reuse the `useTab` hook
 
-  const tabProps = useTab({ ...props, ref })
+  const tabProps = useTab({ ...props })
   const isSelected = !!tabProps['aria-selected']
 
   // 2. Hook into the Tabs `size`, `variant`, props

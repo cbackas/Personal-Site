@@ -1,5 +1,7 @@
-import { Center, ChakraProvider, extendTheme, ThemeConfig, useColorModeValue } from '@chakra-ui/react'
+import { ChakraProvider, extendTheme, ThemeConfig } from '@chakra-ui/react'
 import { mode } from '@chakra-ui/theme-tools'
+import { Dict } from '@chakra-ui/utils'
+import { AppProps } from 'next/app'
 import Head from 'next/head'
 
 const config: ThemeConfig = {
@@ -10,7 +12,7 @@ const config: ThemeConfig = {
 const theme = extendTheme({
   config,
   styles: {
-    global: (props) => ({
+    global: (props: Dict<any>) => ({
       body: {
         bg: mode('white', 'gray.700')(props),
         color: mode('gray.700', 'white')(props)
@@ -19,7 +21,7 @@ const theme = extendTheme({
   }
 })
 
-export default function App ({ Component, pageProps }) {
+export default function App ({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <ChakraProvider theme={theme}>
       <Head>
@@ -27,7 +29,7 @@ export default function App ({ Component, pageProps }) {
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <link rel='shortcut icon' href='/static/favicon.ico' />
         <style>
-          @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+          @import url(https://fonts.googleapis.com/css2?family=Secular+One&display=swap);
         </style>
       </Head>
       <Component {...pageProps} />

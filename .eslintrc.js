@@ -6,7 +6,9 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'standard-with-typescript',
-    'plugin:react/jsx-runtime'
+    'plugin:react/jsx-runtime',
+    "next",
+    "next/core-web-vitals"
   ],
   overrides: [
   ],
@@ -19,7 +21,8 @@ module.exports = {
     'react'
   ],
   rules: {
-    '@typescript-eslint/strict-boolean-expressions': 'warn'
+    '@typescript-eslint/strict-boolean-expressions': 'warn',
+    "@next/next/no-img-element": "off"
   },
   settings: {
     react: {
