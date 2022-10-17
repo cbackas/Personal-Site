@@ -47,9 +47,9 @@ const CustomTab = React.forwardRef((props: any): JSX.Element => {
         variant={'solid'}
         fontSize={fontSize.toString() + 'em'}
         colorScheme={isSelected ? 'yellow' : ''}
-        onMouseEnter={() => setSizeModifier(0.1)}
+        onMouseEnter={() => setSizeModifier(0.05)}
         onMouseLeave={() => setSizeModifier(0)}
-        boxShadow={isSelected ? 'dark-lg' : 'none'}
+        boxShadow={isSelected ? 'dark-lg' : 'lg'}
       >
         {tabProps.children}
       </Code>
