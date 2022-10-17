@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react'
 import Head from 'next/head'
 import ParticleCanvas from '../components/ParticleCanvas'
+import TabArea from '../components/TabArea'
 import TitleArea from '../components/TitleArea/TitleArea'
 
 const IndexPage = (): JSX.Element => {
@@ -15,7 +16,7 @@ const IndexPage = (): JSX.Element => {
         <ParticleCanvas />
         <TitleArea />
 
-        {/* <Box
+        <Box
           position={{ lg: 'absolute' }}
           top={{ lg: 0 }}
           bottom={{ lg: 0 }}
@@ -30,7 +31,7 @@ const IndexPage = (): JSX.Element => {
 
         >
           <TabArea />
-        </Box> */}
+        </Box>
       </Box>
     </>
   )
