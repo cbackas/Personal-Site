@@ -45,8 +45,8 @@ export class PositionEntry {
 
 export class ExtendedDate extends Date {
   getMonthString (): string {
-    return ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-      .at(this.getMonth()) ?? 'UNDEF'
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    return months.at(this.getMonth()) ?? 'UNDEF'
   }
 
   format (): string {
