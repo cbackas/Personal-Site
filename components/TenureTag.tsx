@@ -7,13 +7,21 @@ interface TenureTagProps {
   end: ExtendedDate
 }
 
-const TenureTag = ({ mode = 'range', start, end }: TenureTagProps): JSX.Element => {
+/**
+ * Componenet that displays the tenure of a position or company
+ * Can either show the length of time or the start and end dates
+ * @param mode the type of tenure tag to display (defaults to 'range')
+ * @param start starting date of the tenure
+ * @param end ending date of the tenure
+ */
+function TenureTag ({ mode = 'range', start, end }: TenureTagProps): JSX.Element {
   const length = tenureString(start, end)
   const range = `${start.format()} - ${end.formatEndString()}`
 
   let tag = range
   let tooltip = length
   let color = end.formatEndString() === 'Present' ? 'green' : 'gray'
+  // reverse the tag and tooltip if the mode is 'length'
   if (mode === 'length') {
     tag = length
     tooltip = range
@@ -29,6 +37,12 @@ const TenureTag = ({ mode = 'range', start, end }: TenureTagProps): JSX.Element 
   )
 }
 
+/**
+ * Provides a formatted representing the length of time between two dates
+ * @param start starting date of the tenure
+ * @param end ending date of the tenure
+ * @returns tenure string in 'x years and y months' format
+ */
 const tenureString = (start: Date, end: Date): string => {
   let totalMonths
   totalMonths = (end.getFullYear() - start.getFullYear()) * 12
