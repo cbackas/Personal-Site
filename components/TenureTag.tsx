@@ -7,13 +7,21 @@ interface TenureTagProps {
   end: ExtendedDate
 }
 
-const TenureTag = ({ mode, start, end }: TenureTagProps): JSX.Element => {
-  const tag = mode === 'range' ? `${start.format()} - ${end.formatEndString()}` : tenureString(start, end)
-  const toolTip = mode === 'range' ? tenureString(start, end) : `${start.format()} - ${end.formatEndString()}`
-  const color = mode === 'range' && end.formatEndString() === 'Present' ? 'green' : 'gray'
+const TenureTag = ({ mode = 'range', start, end }: TenureTagProps): JSX.Element => {
+  const length = tenureString(start, end)
+  const range = `${start.format()} - ${end.formatEndString()}`
+
+  let tag = range
+  let tooltip = length
+  let color = end.formatEndString() === 'Present' ? 'green' : 'gray'
+  if (mode === 'length') {
+    tag = length
+    tooltip = range
+    color = 'gray'
+  }
 
   return (
-    <Tooltip label={toolTip}>
+    <Tooltip label={tooltip}>
       <Tag colorScheme={color}>
         {tag}
       </Tag>
