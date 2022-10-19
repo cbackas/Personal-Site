@@ -21,10 +21,6 @@ export class HistoryEntry {
   get end (): ExtendedDate {
     return this.positions.reduce((a, b) => a.end > b.end ? a : b).end
   }
-
-  get tenureString (): string {
-    return tenureString(this.start, this.end)
-  }
 }
 
 export class PositionEntry {
@@ -36,10 +32,6 @@ export class PositionEntry {
     this.title = title
     this.start = new ExtendedDate(start)
     this.end = new ExtendedDate(end)
-  }
-
-  get tenureString (): string {
-    return tenureString(this.start, this.end)
   }
 }
 
@@ -56,27 +48,4 @@ export class ExtendedDate extends Date {
   formatEndString (): string {
     return this.toDateString() === new Date().toDateString() ? 'Present' : this.format()
   }
-}
-
-const tenureString = (start: Date, end: Date): string => {
-  let totalMonths
-  totalMonths = (end.getFullYear() - start.getFullYear()) * 12
-  totalMonths -= start.getMonth()
-  totalMonths += end.getMonth()
-  totalMonths = totalMonths <= 0 ? 0 : totalMonths
-
-  const years = Math.floor(totalMonths / 12)
-  const months = totalMonths % 12
-
-  let yearsString = `${years} years`
-  if (years === 0) yearsString = ''
-  if (years === 1) yearsString = '1 year'
-
-  let monthsString = `${months} months`
-  if (months === 0) monthsString = ''
-  if (months === 1) monthsString = '1 month'
-
-  const and = years > 0 && months > 0 ? ' and ' : ''
-
-  return `${yearsString}${and}${monthsString}`
 }

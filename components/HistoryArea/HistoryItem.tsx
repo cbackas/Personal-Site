@@ -1,6 +1,7 @@
-import { Center, Divider, Grid, GridItem, Heading, Icon, Tag, VStack } from '@chakra-ui/react'
+import { Center, Divider, Grid, GridItem, Heading, Icon, VStack } from '@chakra-ui/react'
 import { Fragment } from 'react'
 import { HistoryEntry } from '../../interfaces/History'
+import TenureTag from '../TenureTag'
 import HistoryPosition from './HistoryPosition'
 
 const HistoryItem = ({ entry }: { entry: HistoryEntry }): JSX.Element => {
@@ -17,11 +18,7 @@ const HistoryItem = ({ entry }: { entry: HistoryEntry }): JSX.Element => {
         <GridItem colSpan={13}>
           <Heading fontSize={{ base: 'xl', sm: 'md', md: 'xl' }}>
             {entry.company}{' '}
-            <Tag
-              colorScheme={'gray'}
-            >
-              {entry.tenureString}
-            </Tag>
+            <TenureTag mode='range' start={entry.start} end={entry.end} />
           </Heading>
         </GridItem>
         <GridItem colSpan={1}>
