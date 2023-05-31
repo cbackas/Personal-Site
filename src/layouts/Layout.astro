@@ -472,7 +472,7 @@ const { title } = Astro.props;
 <script>
 	import { tsParticles } from "tsparticles-engine";
 	import { loadFull } from "tsparticles";
-
+	
 	await loadFull(tsParticles);
 </script>
 
@@ -483,6 +483,7 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="darkreader-lock">
 		<title>{title}</title>
 	</head>
 	<body>
@@ -493,13 +494,13 @@ const { title } = Astro.props;
 			<slot />
 		</div>
 	</body>
-</html>
-<style is:global>
-	:root {
-		--accent: 80, 58, 234;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
+	</html>
+	<style is:global>
+		:root {
+			--accent: 80, 58, 234;
+			--accent-gradient: linear-gradient(
+				45deg,
+				rgb(var(--accent)),
 			#eca53a 30%,
 			white 60%
 		);
