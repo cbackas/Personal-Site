@@ -1,0 +1,39 @@
+---
+import Skills from "../components/Skills.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Zac Gibson">
+	<main>
+		<h1>Zac Gibson</h1>
+		<Skills />
+	</main>
+</Layout>
+
+<style>
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		margin: 0;
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+		padding: 1.5rem;
+		height: 90vh;
+		width: 90vw;
+		background-color: transparent;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+		color: #ffffffa9;
+	}
+</style>

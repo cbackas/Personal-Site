@@ -1,0 +1,74 @@
+<div class="container">
+	<div class="hstack">
+		<div class="left">
+			<h2>I'm good at...</h2>
+		</div>
+		<div class="right">
+			<h2><span id="skill" class="text-gradient"> Devops</span></h2>
+		</div>
+	</div>
+</div>
+
+<script>
+	const skills = [
+		"Devops",
+		"Cloud Architecture (AWS)",
+		"Continous Integration",
+		"Typescript",
+		"Docker",
+		"Ansible",
+		"Web Development",
+		"Serverless",
+	];
+
+	let currentSkillIndex = 0;
+	const defaultInterval = 3400;
+	const firstSkillInterval = 11000;
+
+	function changeSkill() {
+		currentSkillIndex = (currentSkillIndex + 1) % skills.length;
+		const element = document.getElementById("skill");
+		if (element != null) {
+			element.innerText = skills[currentSkillIndex];
+		}
+		let interval =
+			currentSkillIndex === 0 ? firstSkillInterval : defaultInterval;
+		setTimeout(changeSkill, interval);
+	}
+
+	setTimeout(changeSkill, firstSkillInterval);
+</script>
+
+<style>
+	.container {
+		margin: 0 auto;
+		max-width: 80vw;
+		padding: 0 1rem;
+	}
+	.hstack {
+		display: flex;
+		width: 80vw;
+		justify-content: space-between;
+	}
+	.left,
+	.right {
+		padding: 1rem;
+		flex: 1;
+	}
+	.left {
+		text-align: right;
+	}
+	h2 {
+		font-size: 2.5rem;
+		font-weight: 800;
+		margin: 0;
+		color: #ffffffa9;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+</style>
