@@ -23,7 +23,7 @@ const options: ISourceOptions = {
 	delay: 0,
 	fullScreen: {
 		enable: true,
-		zIndex: -1,
+		zIndex: -100,
 	},
 	detectRetina: true,
 	duration: 0,
@@ -473,13 +473,9 @@ const { title } = Astro.props;
 	import { tsParticles } from "tsparticles-engine";
 	import { loadFull } from "tsparticles";
 
-	(async () => {
-		await loadFull(tsParticles);
-	})();
+	await loadFull(tsParticles);
 </script>
 
-
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -490,8 +486,12 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<Particles id="tsparticles" options={options} />
-		<slot />
+		<div class="background-layer">
+			<Particles id="tsparticles" options={options} />
+		</div>
+		<div class="content-layer">
+			<slot />
+		</div>
 	</body>
 </html>
 <style is:global>
@@ -507,6 +507,17 @@ const { title } = Astro.props;
 	html {
 		font-family: system-ui, sans-serif;
 		background-color: #000000;
+	}
+	.background-layer,
+	.content-layer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.content-layer {
+		z-index: 1;
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
