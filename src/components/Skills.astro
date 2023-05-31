@@ -1,13 +1,14 @@
 <div class="container">
 	<div class="hstack">
-		<div class="left">
+		<div class="intro-text">
 			<h2>I'm good at...</h2>
 		</div>
-		<div class="right">
+		<div class="skill-display">
 			<h2><span id="skill" class="text-gradient"> Devops</span></h2>
 		</div>
 	</div>
 </div>
+
 
 <script>
 	const skills = [
@@ -49,13 +50,14 @@
 		display: flex;
 		width: 80vw;
 		justify-content: space-between;
+		flex-wrap: wrap;
 	}
-	.left,
-	.right {
+	.intro-text,
+	.skill-display {
 		padding: 1rem;
 		flex: 1;
 	}
-	.left {
+	.intro-text {
 		text-align: right;
 	}
 	h2 {
@@ -70,5 +72,24 @@
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
 		background-position: 0%;
+	}
+	@media (max-width: 800px) {
+		.intro-text,
+		.skill-display {
+			flex-basis: 100%;
+			text-align: center;
+		}
+
+		.intro-text {
+			padding: 2rem 0rem 10px 0rem;
+		}
+		.skill-display {
+			padding: 0px 0rem 0rem 0rem;
+		}
+	}
+	@media (max-width: 600px) {
+		h2 {
+			font-size: 2rem;
+		}
 	}
 </style>
