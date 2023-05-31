@@ -4,7 +4,9 @@
 			<h2>I'm good at...</h2>
 		</div>
 		<div class="skill-display">
-			<h2><span id="skill" class="text-gradient"> DevOps</span></h2>
+			<h2>
+				<span id="skill" class="text-gradient"> Amazon Web Services</span>
+			</h2>
 		</div>
 	</div>
 </div>
@@ -12,18 +14,18 @@
 <script>
 	const skills = [
 		"DevOps",
-		"Continous Integration",
 		"Amazon Web Services",
+		"Continous Integration",
 		"Serverless Architectures",
 		"Infrastructure as Code",
 		"Docker",
 		"Web Development",
-		"Typescript"
+		"Typescript",
 	] as const;
 
-	let currentSkillIndex = 0;
-	const defaultInterval = 1600;
-	const firstSkillInterval = 6500;
+	let currentSkillIndex = 1;
+	const defaultInterval = 1000;
+	const firstSkillInterval = 10000;
 
 	function changeSkill() {
 		currentSkillIndex = (currentSkillIndex + 1) % skills.length;
@@ -36,7 +38,7 @@
 		setTimeout(changeSkill, interval);
 	}
 
-	setTimeout(changeSkill, firstSkillInterval);
+	setTimeout(changeSkill, defaultInterval);
 </script>
 
 <style>
