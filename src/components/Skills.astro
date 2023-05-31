@@ -4,9 +4,7 @@
 			<h2>I'm good at...</h2>
 		</div>
 		<div class="skill-display">
-			<h2>
-				<span id="skill" class="text-gradient"> Amazon Web Services</span>
-			</h2>
+			<span id="skill" class="text-gradient"></span>
 		</div>
 	</div>
 </div>
@@ -25,20 +23,32 @@
 
 	let currentSkillIndex = 1;
 	const defaultInterval = 1000;
-	const firstSkillInterval = 10000;
+	const firstSkillInterval = 11000;
 
-	function changeSkill() {
+	function changeSkill(): void {
 		currentSkillIndex = (currentSkillIndex + 1) % skills.length;
-		const element = document.getElementById("skill");
+		const element: HTMLElement | null = document.getElementById("skill");
 		if (element != null) {
 			element.innerText = skills[currentSkillIndex];
+
+			if (currentSkillIndex === 0) {
+				element.classList.add("main");
+			} else {
+				element.classList.remove("main");
+			}
+
+			element.classList.add("pop-in");
+
+			element.addEventListener("animationend", (a) => {
+				element.classList.remove("pop-in");
+			});
 		}
-		let interval =
+		let interval: number =
 			currentSkillIndex === 0 ? firstSkillInterval : defaultInterval;
-		setTimeout(changeSkill, interval);
+		void setTimeout(changeSkill, interval);
 	}
 
-	setTimeout(changeSkill, defaultInterval);
+	changeSkill();
 </script>
 
 <style>
@@ -59,18 +69,36 @@
 	.intro-text {
 		text-align: right;
 	}
-	h2 {
+	h2,
+	.text-gradient {
 		font-size: 2.5rem;
 		font-weight: 800;
 		margin: 0;
 		color: #ffffffa9;
 	}
 	.text-gradient {
-		background-image: var(--accent-gradient);
+		background-image: var(--accent-gradient-alt);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
 		background-position: 0%;
+	}
+	.text-gradient.main {
+		background-image: var(--accent-gradient);
+	}
+	@keyframes pop-in {
+		0% {
+			opacity: 0;
+			transform: scale(0.1);
+		}
+		100% {
+			opacity: 1;
+			transform: scale(0.7);
+		}
+	}
+	.pop-in {
+		will-change: "scale";
+		animation: pop-in 0.3s ease-out;
 	}
 	@media (max-width: 800px) {
 		.intro-text,
