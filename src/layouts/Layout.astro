@@ -58,7 +58,10 @@ const options: ISourceOptions = {
 			},
 			random: true,
 			size: false,
-			speed: 1,
+			speed: {
+				min: 0.0,
+				max: 0.1,
+			},
 			spin: {
 				acceleration: 0,
 				enable: false,
