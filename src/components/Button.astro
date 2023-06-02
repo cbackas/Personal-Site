@@ -1,0 +1,67 @@
+---
+import { Image } from "@astrojs/image/components";
+
+export interface Props {
+	icon: "github" | "linkedin" | "email";
+}
+
+let iconSrc: Promise<typeof import("*.svg")>;
+let destination: string;
+switch (Astro.props.icon) {
+	case "github":
+		iconSrc = import("../assets/github-icon.svg");
+		destination = "https://github.com/cbackas";
+		break;
+	case "linkedin":
+		iconSrc = import("../assets/linkedin-icon.svg");
+		destination = "https://www.linkedin.com/in/zac-gibson/";
+		break;
+	case "email":
+		iconSrc = import("../assets/email-icon.svg");
+		destination = "mailto://zgibson@live.com";
+		break;
+}
+
+let delay = Math.random() * 1; // generate a random delay between 0 and 1 seconds
+---
+
+<a href={destination} target="_blank" rel="noopener noreferrer">
+	<button style={`animation-delay: ${delay}s`}>
+		<Image
+			src={iconSrc}
+			alt={`${Astro.props.icon} icon`}
+			width={40}
+			height={40}
+		/>
+	</button>
+</a>
+
+<style>
+	button {
+		background: white;
+		border: none;
+		margin: 0 0.4em;
+		padding: 0.3em;
+		cursor: pointer;
+		border-radius: 0.5em;
+		transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+		animation: bounce 2.5s infinite;
+	}
+	button:hover {
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+		transform: translateY(-2px);
+		animation: none;
+	}
+	button img {
+		vertical-align: middle;
+	}
+	@keyframes bounce {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-1px);
+		}
+	}
+</style>
