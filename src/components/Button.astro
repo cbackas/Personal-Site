@@ -22,7 +22,7 @@ switch (Astro.props.icon) {
 		break;
 }
 
-let delay = Math.random() * 1; // generate a random delay between 0 and 1 seconds
+let delay = Math.random() * 3; // generate a random delay between 0 and 3 seconds
 ---
 
 <a href={destination} target="_blank" rel="noopener noreferrer">
@@ -45,11 +45,11 @@ let delay = Math.random() * 1; // generate a random delay between 0 and 1 second
 		cursor: pointer;
 		border-radius: 0.5em;
 		transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
-		animation: bounce 2.5s infinite;
+		animation: bounce 3s infinite;
 	}
 	button:hover {
 		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-		transform: translateY(-2px);
+		transform: translateY(-3px);
 		animation: none;
 	}
 	button img {
@@ -58,10 +58,10 @@ let delay = Math.random() * 1; // generate a random delay between 0 and 1 second
 	@keyframes bounce {
 		0%,
 		100% {
-			transform: translateY(0);
+			transform: translateY(0px);
 		}
 		50% {
-			transform: translateY(-1px);
+			transform: translateY(-2px);
 		}
 	}
 </style>
