@@ -1,4 +1,5 @@
 ---
+import Button from "../components/Button.astro";
 import Skills from "../components/Skills.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -7,6 +8,11 @@ import Layout from "../layouts/Layout.astro";
 	<main>
 		<h1>Zac Gibson</h1>
 		<Skills />
+		<div class="button-stack">
+			<Button icon="github" />
+			<Button icon="linkedin" />
+			<Button icon="email" />
+		</div>
 	</main>
 </Layout>
 
@@ -19,7 +25,6 @@ import Layout from "../layouts/Layout.astro";
 		overflow-x: hidden;
 		margin: 0;
 	}
-
 	main {
 		display: flex;
 		flex-direction: column;
@@ -27,6 +32,7 @@ import Layout from "../layouts/Layout.astro";
 		margin: auto;
 		padding: 35vh 1.5rem 0 1.5rem;
 		width: 90vw;
+		height: 60vh;
 		background-color: transparent;
 	}
 	h1 {
@@ -35,6 +41,15 @@ import Layout from "../layouts/Layout.astro";
 		margin: 0;
 		color: #ffffff;
 	}
+	.button-stack {
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-top: auto;
+	}
+
+	/* dynamic media stuff  */
 	@media (max-width: 800px) {
 		h1 {
 			font-size: 3.5rem;
