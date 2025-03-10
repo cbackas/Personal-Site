@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.16.18",
+    "astro": "^5.4.2",
     "astro-particles": "^2.10.0",
     "tsparticles": "^2.12.0"
   },
