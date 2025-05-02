@@ -11,44 +11,35 @@
 
 <script>
 	const skills = [
+		"TypeScript",
+		"Rust",
+		"Serverless Architectures",
 		"DevOps",
 		"Amazon Web Services",
-		"Continous Integration",
-		"Serverless Architectures",
 		"Infrastructure as Code",
-		"Docker",
-		"Web Development",
-		"Typescript",
 	] as const;
 
-	let currentSkillIndex = 1;
+	let currentSkillIndex = 0;
 	const defaultInterval = 2000;
-	const firstSkillInterval = 11000;
 
 	while (true) {
-		currentSkillIndex = (currentSkillIndex + 1) % skills.length;
 		const element: HTMLElement | null = document.getElementById("skill");
 		if (element != null) {
 			element.innerText = skills[currentSkillIndex];
 
-			if (currentSkillIndex === 0) {
-				element.classList.add("main");
-			} else {
-				element.classList.remove("main");
-			}
+			// if (currentSkillIndex === 0) {
+			// 	element.classList.add("main");
+			// } else {
+			// 	element.classList.remove("main");
+			// }
 
 			element.classList.add("pop-in");
-
 			element.addEventListener("animationend", (_a) => {
 				element.classList.remove("pop-in");
 			});
 		}
-		await new Promise((resolve) =>
-			setTimeout(
-				resolve,
-				currentSkillIndex === 0 ? firstSkillInterval : defaultInterval,
-			),
-		);
+		await new Promise((resolve) => setTimeout(resolve, defaultInterval));
+		currentSkillIndex = (currentSkillIndex + 1) % skills.length;
 	}
 </script>
 
