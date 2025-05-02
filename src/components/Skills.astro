@@ -25,7 +25,7 @@
 	const defaultInterval = 1000;
 	const firstSkillInterval = 11000;
 
-	function changeSkill(): void {
+	while (true) {
 		currentSkillIndex = (currentSkillIndex + 1) % skills.length;
 		const element: HTMLElement | null = document.getElementById("skill");
 		if (element != null) {
@@ -39,16 +39,17 @@
 
 			element.classList.add("pop-in");
 
-			element.addEventListener("animationend", (a) => {
+			element.addEventListener("animationend", (_a) => {
 				element.classList.remove("pop-in");
 			});
 		}
-		let interval: number =
-			currentSkillIndex === 0 ? firstSkillInterval : defaultInterval;
-		void setTimeout(changeSkill, interval);
+		await new Promise((resolve) =>
+			setTimeout(
+				resolve,
+				currentSkillIndex === 0 ? firstSkillInterval : defaultInterval,
+			),
+		);
 	}
-
-	changeSkill();
 </script>
 
 <style>
