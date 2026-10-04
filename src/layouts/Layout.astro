@@ -1,154 +1,4 @@
 ---
-import Particles from "astro-particles";
-import type { ISourceOptions, SizeMode } from "tsparticles-engine";
-
-const options: ISourceOptions = {
-	autoPlay: true,
-	background: {
-		color: {
-			value: "#101119",
-		},
-		opacity: 1,
-	},
-	backgroundMask: {
-		composite: "destination-out",
-		cover: {
-			color: {
-				value: "#fff",
-			},
-			opacity: 1,
-		},
-		enable: false,
-	},
-	delay: 0,
-	fullScreen: {
-		enable: true,
-		zIndex: -100,
-	},
-	detectRetina: true,
-	duration: 0,
-	fpsLimit: 144,
-	particles: {
-		color: {
-			value: "#ffffff",
-		},
-		move: {
-			angle: {
-				offset: 0,
-				value: 90,
-			},
-			center: {
-				x: 50,
-				y: 50,
-				mode: "percent" as SizeMode.percent,
-				radius: 0,
-			},
-			decay: 0,
-			distance: {},
-			direction: "none",
-			drift: 0,
-			enable: true,
-			outModes: {
-				default: "out",
-				bottom: "out",
-				left: "out",
-				right: "out",
-				top: "out",
-			},
-			random: true,
-			size: false,
-			speed: {
-				min: 0.0,
-				max: 0.1,
-			},
-			spin: {
-				acceleration: 0,
-				enable: false,
-			},
-			straight: false,
-			trail: {
-				enable: false,
-				length: 10,
-				fill: {},
-			},
-			vibrate: false,
-			warp: false,
-		},
-		number: {
-			density: {
-				enable: true,
-				width: 2560,
-				height: 1440,
-			},
-			limit: 0,
-			value: 270,
-		},
-		opacity: {
-			random: {
-				enable: true,
-				minimumValue: 0.1,
-			},
-			value: {
-				min: 0,
-				max: 1,
-			},
-			animation: {
-				count: 0,
-				enable: true,
-				speed: 0.4,
-				decay: 0,
-				sync: false,
-				destroy: "none",
-				startValue: "random",
-				minimumValue: 0.1,
-			},
-		},
-		reduceDuplicates: false,
-		shadow: {
-			blur: 0,
-			color: {
-				value: "#000",
-			},
-			enable: false,
-			offset: {
-				x: 0,
-				y: 0,
-			},
-		},
-		shape: {
-			options: {},
-			type: "square",
-		},
-		size: {
-			random: {
-				enable: true,
-				minimumValue: 1,
-			},
-			value: {
-				min: 1,
-				max: 3,
-			},
-		},
-		stroke: {
-			width: 0,
-		},
-		zIndex: {
-			random: {
-				enable: true,
-				minimumValue: 10,
-			},
-			value: {
-				min: 10,
-				max: 10,
-			},
-		},
-	},
-	pauseOnBlur: true,
-	pauseOnOutsideViewport: true,
-	smooth: false,
-	zLayers: 100,
-};
-
 export interface Props {
 	title: string;
 }
@@ -157,10 +7,146 @@ const { title } = Astro.props;
 ---
 
 <script>
-	import { tsParticles } from "tsparticles-engine";
+	import { tsParticles } from "@tsparticles/engine";
+	import type { ISourceOptions } from "@tsparticles/engine";
 	import { loadFull } from "tsparticles";
 
+	const options: ISourceOptions = {
+		autoPlay: true,
+		background: {
+			color: {
+				value: "#101119",
+			},
+			opacity: 1,
+		},
+		backgroundMask: {
+			composite: "destination-out",
+			cover: {
+				color: {
+					value: "#fff",
+				},
+				opacity: 1,
+			},
+			enable: false,
+		},
+		delay: 0,
+		fullScreen: {
+			enable: true,
+			zIndex: -100,
+		},
+		detectRetina: true,
+		duration: 0,
+		fpsLimit: 144,
+		particles: {
+			color: {
+				value: "#ffffff",
+			},
+			move: {
+				angle: {
+					offset: 0,
+					value: 90,
+				},
+				center: {
+					x: 50,
+					y: 50,
+					mode: "percent",
+					radius: 0,
+				},
+				decay: 0,
+				distance: {},
+				direction: "none",
+				drift: 0,
+				enable: true,
+				outModes: {
+					default: "out",
+					bottom: "out",
+					left: "out",
+					right: "out",
+					top: "out",
+				},
+				random: true,
+				size: false,
+				speed: {
+					min: 0.0,
+					max: 0.1,
+				},
+				spin: {
+					acceleration: 0,
+					enable: false,
+				},
+				straight: false,
+				trail: {
+					enable: false,
+					length: 10,
+					fill: {},
+				},
+				vibrate: false,
+				warp: false,
+			},
+			number: {
+				density: {
+					enable: true,
+					width: 2560,
+					height: 1440,
+				},
+				limit: 0,
+				value: 270,
+			},
+			opacity: {
+				value: {
+					min: 0.1,
+					max: 1,
+				},
+				animation: {
+					count: 0,
+					enable: true,
+					speed: 0.4,
+					decay: 0,
+					sync: false,
+					destroy: "none",
+					startValue: "random",
+				},
+			},
+			reduceDuplicates: false,
+			shadow: {
+				blur: 0,
+				color: {
+					value: "#000",
+				},
+				enable: false,
+				offset: {
+					x: 0,
+					y: 0,
+				},
+			},
+			shape: {
+				options: {},
+				type: "square",
+			},
+			size: {
+				value: {
+					min: 1,
+					max: 3,
+				},
+			},
+			stroke: {
+				width: 0,
+			},
+			zIndex: {
+				value: {
+					min: 10,
+					max: 10,
+				},
+			},
+		},
+		pauseOnBlur: true,
+		pauseOnOutsideViewport: true,
+		smooth: false,
+		zLayers: 100,
+	};
+
 	await loadFull(tsParticles);
+	await tsParticles.load({ id: "tsparticles", options });
 </script>
 
 <html lang="en">
@@ -174,9 +160,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<div class="background-layer">
-			<Particles id="tsparticles" options={options} />
-		</div>
+		<div class="background-layer" id="tsparticles"></div>
 		<div class="content-layer">
 			<slot />
 		</div>
